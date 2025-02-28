@@ -1,0 +1,795 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC94E61B-8EC6-410A-BFE7-D82F29C07FEA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>di_ra5_proyecto_Cesar_Aganzo</RootNamespace>
+    <AssemblyName>di-ra5-proyecto-Cesar-Aganzo</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\di-ra6-proyecto-Cesar-Aganzo.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>treasurechesticon_98562.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.9.0.1\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Pipelines, Version=9.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.9.0.1\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=9.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.9.0.1\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=9.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.9.0.1\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controlador\ControlApp.cs" />
+    <Compile Include="Controlador\ControlCliente.cs" />
+    <Compile Include="Controlador\ControlCoche.cs" />
+    <Compile Include="Controlador\ControlEmpleado.cs" />
+    <Compile Include="Controlador\ControlProducto.cs" />
+    <Compile Include="Controlador\Dao\ClienteDao\ClienteDaoBin.cs" />
+    <Compile Include="Controlador\Dao\ClienteDao\ClienteDaoJson.cs" />
+    <Compile Include="Controlador\Dao\ClienteDao\ClienteDaoXml.cs" />
+    <Compile Include="Controlador\Dao\CochesDao\CochesDaoBin.cs" />
+    <Compile Include="Controlador\Dao\CochesDao\CochesDaoJson.cs" />
+    <Compile Include="Controlador\Dao\CochesDao\CochesDaoXml.cs" />
+    <Compile Include="Controlador\Dao\EmpleadoDao\EmpleadoDaoJson.cs" />
+    <Compile Include="Controlador\Dao\EmpleadoDao\EmpleadoDaoBin.cs" />
+    <Compile Include="Controlador\Dao\EmpleadoDao\EmpleadoDaoXml.cs" />
+    <Compile Include="Controlador\Dao\ProductoDao\ProductoDaoBin.cs" />
+    <Compile Include="Controlador\Dao\ProductoDao\ProductoDaoJson.cs" />
+    <Compile Include="Controlador\Dao\ProductoDao\ProductoDaoXml.cs" />
+    <Compile Include="Modelo\Coche.cs" />
+    <Compile Include="Modelo\Producto.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Vista\FormAcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormAcercaDe.Designer.cs">
+      <DependentUpon>FormAcercaDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormAyuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormAyuda.Designer.cs">
+      <DependentUpon>FormAyuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormPreguntasFAQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormPreguntasFAQ.Designer.cs">
+      <DependentUpon>FormPreguntasFAQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormUpdateDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormUpdateDelete.Designer.cs">
+      <DependentUpon>FormUpdateDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormAniadir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormAniadir.Designer.cs">
+      <DependentUpon>FormAniadir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormClienteTabla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormClienteTabla.Designer.cs">
+      <DependentUpon>FormClienteTabla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormCochesGrf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormCochesGrf.Designer.cs">
+      <DependentUpon>FormCochesGrf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormCochesTabla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormCochesTabla.Designer.cs">
+      <DependentUpon>FormCochesTabla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormEmpleadosGrf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormEmpleadosGrf.Designer.cs">
+      <DependentUpon>FormEmpleadosGrf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormEmpleadosTabla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormEmpleadosTabla.Designer.cs">
+      <DependentUpon>FormEmpleadosTabla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Cliente.cs" />
+    <Compile Include="Modelo\Empleado.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\FormImportExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormImportExport.Designer.cs">
+      <DependentUpon>FormImportExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormClientesGrf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormClientesGrf.Designer.cs">
+      <DependentUpon>FormClientesGrf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormProductosGrf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormProductosGrf.Designer.cs">
+      <DependentUpon>FormProductosGrf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormProductosTabla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormProductosTabla.Designer.cs">
+      <DependentUpon>FormProductosTabla.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReportClienteGrf.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportClienteTabla.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportClienteTabla2.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCochesGrf.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportCochesTabla.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportEmpleadoGrf.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportEmpleadoTabla.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportProductosGrf.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportProductosTabla.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormAcercaDe.resx">
+      <DependentUpon>FormAcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormAyuda.resx">
+      <DependentUpon>FormAyuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormPreguntasFAQ.resx">
+      <DependentUpon>FormPreguntasFAQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormUpdateDelete.resx">
+      <DependentUpon>FormUpdateDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormAniadir.resx">
+      <DependentUpon>FormAniadir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormClientesGrf.resx">
+      <DependentUpon>FormClientesGrf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormClienteTabla.resx">
+      <DependentUpon>FormClienteTabla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormCochesGrf.resx">
+      <DependentUpon>FormCochesGrf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormCochesTabla.resx">
+      <DependentUpon>FormCochesTabla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormEmpleadosGrf.resx">
+      <DependentUpon>FormEmpleadosGrf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormEmpleadosTabla.resx">
+      <DependentUpon>FormEmpleadosTabla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormImportExport.resx">
+      <DependentUpon>FormImportExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormProductosGrf.resx">
+      <DependentUpon>FormProductosGrf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormProductosTabla.resx">
+      <DependentUpon>FormProductosTabla.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\clientes.json" />
+    <None Include="bin\Debug\coches.json" />
+    <None Include="bin\Debug\empleados.json" />
+    <None Include="bin\Debug\Help\css\bulma.css.map" />
+    <None Include="bin\Debug\Help\fti\FTI_100.json" />
+    <None Include="bin\Debug\Help\fti\FTI_101.json" />
+    <None Include="bin\Debug\Help\fti\FTI_102.json" />
+    <None Include="bin\Debug\Help\fti\FTI_103.json" />
+    <None Include="bin\Debug\Help\fti\FTI_104.json" />
+    <None Include="bin\Debug\Help\fti\FTI_105.json" />
+    <None Include="bin\Debug\Help\fti\FTI_106.json" />
+    <None Include="bin\Debug\Help\fti\FTI_107.json" />
+    <None Include="bin\Debug\Help\fti\FTI_108.json" />
+    <None Include="bin\Debug\Help\fti\FTI_109.json" />
+    <None Include="bin\Debug\Help\fti\FTI_110.json" />
+    <None Include="bin\Debug\Help\fti\FTI_111.json" />
+    <None Include="bin\Debug\Help\fti\FTI_112.json" />
+    <None Include="bin\Debug\Help\fti\FTI_113.json" />
+    <None Include="bin\Debug\Help\fti\FTI_114.json" />
+    <None Include="bin\Debug\Help\fti\FTI_115.json" />
+    <None Include="bin\Debug\Help\fti\FTI_116.json" />
+    <None Include="bin\Debug\Help\fti\FTI_117.json" />
+    <None Include="bin\Debug\Help\fti\FTI_118.json" />
+    <None Include="bin\Debug\Help\fti\FTI_119.json" />
+    <None Include="bin\Debug\Help\fti\FTI_120.json" />
+    <None Include="bin\Debug\Help\fti\FTI_250.json" />
+    <None Include="bin\Debug\Help\fti\FTI_49.json" />
+    <None Include="bin\Debug\Help\fti\FTI_51.json" />
+    <None Include="bin\Debug\Help\fti\FTI_53.json" />
+    <None Include="bin\Debug\Help\fti\FTI_97.json" />
+    <None Include="bin\Debug\Help\fti\FTI_98.json" />
+    <None Include="bin\Debug\Help\fti\FTI_99.json" />
+    <None Include="bin\Debug\Help\fti\FTI_Files.json" />
+    <None Include="bin\Debug\Help\LastBuild.log" />
+    <None Include="bin\Debug\Help\Web.Config" />
+    <None Include="bin\Debug\Help\webfonts\fa-brands-400.ttf" />
+    <None Include="bin\Debug\Help\webfonts\fa-brands-400.woff2" />
+    <None Include="bin\Debug\Help\webfonts\fa-regular-400.ttf" />
+    <None Include="bin\Debug\Help\webfonts\fa-regular-400.woff2" />
+    <None Include="bin\Debug\Help\webfonts\fa-solid-900.ttf" />
+    <None Include="bin\Debug\Help\webfonts\fa-solid-900.woff2" />
+    <None Include="bin\Debug\Help\webfonts\fa-v4compatibility.ttf" />
+    <None Include="bin\Debug\Help\webfonts\fa-v4compatibility.woff2" />
+    <None Include="bin\Debug\productos.json" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente.datasource" />
+    <None Include="Properties\DataSources\di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche.datasource" />
+    <None Include="Properties\DataSources\di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado.datasource" />
+    <None Include="Properties\DataSources\di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\clientes.xml" />
+    <Content Include="bin\Debug\coches.xml" />
+    <Content Include="bin\Debug\empleados.xml" />
+    <Content Include="bin\Debug\helperPreguntasPAQ.html" />
+    <Content Include="bin\Debug\helperAyuda.html" />
+    <Content Include="bin\Debug\helperAniadir.html" />
+    <Content Include="bin\Debug\helperImportExport.html" />
+    <Content Include="bin\Debug\helperUpdateDelete.html" />
+    <Content Include="bin\Debug\helperPrincipal.html" />
+    <Content Include="bin\Debug\Help\css\bulma.css" />
+    <Content Include="bin\Debug\Help\css\bulma.min.css" />
+    <Content Include="bin\Debug\Help\css\font-awesome.css" />
+    <Content Include="bin\Debug\Help\css\font-awesome.min.css" />
+    <Content Include="bin\Debug\Help\css\ja-JP.css" />
+    <Content Include="bin\Debug\Help\css\ko-KR.css" />
+    <Content Include="bin\Debug\Help\css\presentationStyle.css" />
+    <Content Include="bin\Debug\Help\css\vs.min.css" />
+    <Content Include="bin\Debug\Help\css\zh-CN.css" />
+    <Content Include="bin\Debug\Help\css\zh-TW.css" />
+    <Content Include="bin\Debug\Help\GeneralError.html" />
+    <Content Include="bin\Debug\Help\html\0108a5d7-f036-5683-bafc-fc4eb0609dfc.htm" />
+    <Content Include="bin\Debug\Help\html\01abd848-d29d-7a83-5ce3-b0179e20cf14.htm" />
+    <Content Include="bin\Debug\Help\html\05ecf69b-9431-b15d-d53b-a13e5af64adb.htm" />
+    <Content Include="bin\Debug\Help\html\07b1e936-ad01-59f1-1306-4681b03ff721.htm" />
+    <Content Include="bin\Debug\Help\html\0868d376-96b9-dc29-a87c-5dc32e1c45f4.htm" />
+    <Content Include="bin\Debug\Help\html\0b34e5e3-8598-30d1-0cb7-a0e3203b51ef.htm" />
+    <Content Include="bin\Debug\Help\html\0b7f0740-36a9-ce3c-289c-9b005876667d.htm" />
+    <Content Include="bin\Debug\Help\html\0be59d38-4fb5-f275-8ef8-fbb1a2d440f6.htm" />
+    <Content Include="bin\Debug\Help\html\103e351b-3f16-d2e0-6a7b-38d91a837c5e.htm" />
+    <Content Include="bin\Debug\Help\html\1143f904-8fef-ac19-1d56-73519f3f1642.htm" />
+    <Content Include="bin\Debug\Help\html\129094c7-320c-0e52-2554-993296947a46.htm" />
+    <Content Include="bin\Debug\Help\html\1386d060-3c74-e385-13ff-0378979cd057.htm" />
+    <Content Include="bin\Debug\Help\html\1549a34b-2c79-cb61-c4d6-aa349878786c.htm" />
+    <Content Include="bin\Debug\Help\html\15a17703-dc20-22b6-32f3-fbc9f93745ec.htm" />
+    <Content Include="bin\Debug\Help\html\1602e40e-98f4-2fd8-1e50-fac6bbf1a7f2.htm" />
+    <Content Include="bin\Debug\Help\html\176cd450-f71d-9b6a-0cd3-b415e0c5578b.htm" />
+    <Content Include="bin\Debug\Help\html\180f61d2-4306-6552-0f15-941d8065b085.htm" />
+    <Content Include="bin\Debug\Help\html\1829d2a8-0641-1596-348f-f34ec0fac201.htm" />
+    <Content Include="bin\Debug\Help\html\184f2741-dcf4-3e40-ceaa-d6de150627f5.htm" />
+    <Content Include="bin\Debug\Help\html\1acab3da-93a1-8ea7-9bcc-868b4e6c9473.htm" />
+    <Content Include="bin\Debug\Help\html\1bf297b8-45fc-8a27-7a75-8345b22079f7.htm" />
+    <Content Include="bin\Debug\Help\html\1f0b998a-0c50-33d7-fa63-11136524fa55.htm" />
+    <Content Include="bin\Debug\Help\html\1fc6816c-3785-3883-5403-7f4278ce2655.htm" />
+    <Content Include="bin\Debug\Help\html\20380d73-276f-dd07-d719-9d0a02c79e70.htm" />
+    <Content Include="bin\Debug\Help\html\20735ccd-0e7b-a273-0f72-012f1f2e1625.htm" />
+    <Content Include="bin\Debug\Help\html\21175444-1fcf-42dd-32fd-8be7ce896f0c.htm" />
+    <Content Include="bin\Debug\Help\html\229c8542-1b72-e36b-f938-2b4ff47835d7.htm" />
+    <Content Include="bin\Debug\Help\html\22e973c1-6f25-49aa-aae0-d1fc6ccc1642.htm" />
+    <Content Include="bin\Debug\Help\html\2338434e-f6bd-2fb1-97bd-1e5e6685a606.htm" />
+    <Content Include="bin\Debug\Help\html\23666460-6b1b-d27f-77ca-d94915f03b20.htm" />
+    <Content Include="bin\Debug\Help\html\29f928d7-43a4-cabe-e78f-e93d861d6380.htm" />
+    <Content Include="bin\Debug\Help\html\29fd2916-4e9c-9f60-6010-a5cf89d0b78e.htm" />
+    <Content Include="bin\Debug\Help\html\2b46677c-b999-9d5d-2d25-d1279ef6593f.htm" />
+    <Content Include="bin\Debug\Help\html\2b6312c2-0e77-2259-641c-2026d9e67fb0.htm" />
+    <Content Include="bin\Debug\Help\html\2cb0908f-f497-7d05-150a-6e1d29e0c182.htm" />
+    <Content Include="bin\Debug\Help\html\2f001a40-6f58-f79a-7b5e-146021befbbf.htm" />
+    <Content Include="bin\Debug\Help\html\2f7eafe7-52ef-f1f6-f014-a5995a2d0ace.htm" />
+    <Content Include="bin\Debug\Help\html\30fc35e3-a622-4c17-d775-b6c1c98024ec.htm" />
+    <Content Include="bin\Debug\Help\html\32310f90-77c3-8099-b882-f73bf4355d1e.htm" />
+    <Content Include="bin\Debug\Help\html\3244c402-52ea-61c9-1926-b76f7d4c72d3.htm" />
+    <Content Include="bin\Debug\Help\html\3316ed74-cead-3772-af58-114bd551d539.htm" />
+    <Content Include="bin\Debug\Help\html\341afe2c-91ec-26c0-95e8-1eeafee81fc8.htm" />
+    <Content Include="bin\Debug\Help\html\3468225c-ec29-7cbe-9ffa-d37d7752ca7a.htm" />
+    <Content Include="bin\Debug\Help\html\35047111-eabb-d6b3-d640-0b0f1b9fcd66.htm" />
+    <Content Include="bin\Debug\Help\html\35a06170-060a-15c6-5256-bd4b724daecf.htm" />
+    <Content Include="bin\Debug\Help\html\35ab8f0d-93a3-b242-2418-b5405f788357.htm" />
+    <Content Include="bin\Debug\Help\html\35baf8e0-580d-fb77-a620-b1762d48e0ce.htm" />
+    <Content Include="bin\Debug\Help\html\3698a42f-40f2-66a4-577f-557a1ab66bf4.htm" />
+    <Content Include="bin\Debug\Help\html\36f9d7a0-4a25-8749-d537-f1d3ccca618a.htm" />
+    <Content Include="bin\Debug\Help\html\375d1aca-49ad-b4b2-2cd0-d7385a6c8f84.htm" />
+    <Content Include="bin\Debug\Help\html\38465202-0c6b-dfe9-22bc-78616f17eed6.htm" />
+    <Content Include="bin\Debug\Help\html\388ce1a9-ed40-1cfd-edd4-c00ecbfd9668.htm" />
+    <Content Include="bin\Debug\Help\html\396e8275-3a60-75fe-9207-c94c9660ab2a.htm" />
+    <Content Include="bin\Debug\Help\html\3a473698-c302-1603-c31e-c57623f29ad8.htm" />
+    <Content Include="bin\Debug\Help\html\3ca23beb-12c7-dc79-854a-cf5b6b3fc835.htm" />
+    <Content Include="bin\Debug\Help\html\3d02c1b3-8645-9bdf-45d5-121ea0872822.htm" />
+    <Content Include="bin\Debug\Help\html\3d3c4b0c-1545-695a-a5e9-819a5c69c4ab.htm" />
+    <Content Include="bin\Debug\Help\html\3df600e0-85c1-2c52-4b21-497f2601096d.htm" />
+    <Content Include="bin\Debug\Help\html\3f1586ca-8402-907f-e9ab-7003181845f1.htm" />
+    <Content Include="bin\Debug\Help\html\401fdafb-6dd4-25c6-347d-b4213696cb66.htm" />
+    <Content Include="bin\Debug\Help\html\4172c9a0-4e49-ac52-f700-4cf80bacbc87.htm" />
+    <Content Include="bin\Debug\Help\html\417d2b19-c5e8-c917-cd67-a8f583e5b2ca.htm" />
+    <Content Include="bin\Debug\Help\html\42b10989-569f-e2bd-25f8-96e140bd3381.htm" />
+    <Content Include="bin\Debug\Help\html\42f97628-9025-6b15-6d8a-14d6c352b22e.htm" />
+    <Content Include="bin\Debug\Help\html\440507ec-a14b-657a-e44a-7ea7b184ccd2.htm" />
+    <Content Include="bin\Debug\Help\html\45045459-9b64-028c-186a-981c617d6ceb.htm" />
+    <Content Include="bin\Debug\Help\html\45a4b3e2-f91c-f2f4-c0c0-a4598dfc9cfc.htm" />
+    <Content Include="bin\Debug\Help\html\45e12ced-4186-cfbb-a12d-7651c8d53fa8.htm" />
+    <Content Include="bin\Debug\Help\html\48ba5646-a929-27d7-7271-f7d8c7e37630.htm" />
+    <Content Include="bin\Debug\Help\html\491eb23f-ce30-a4ba-d968-51cac7f26e84.htm" />
+    <Content Include="bin\Debug\Help\html\49b72949-9ec9-f149-8169-fd825a2dd056.htm" />
+    <Content Include="bin\Debug\Help\html\4b9815f4-858a-6f3e-5961-e1c85f7458d9.htm" />
+    <Content Include="bin\Debug\Help\html\4c13917c-85ec-7354-c367-e7370a4d3fcb.htm" />
+    <Content Include="bin\Debug\Help\html\4d029af2-0393-fb89-cd1e-e6b759b1662e.htm" />
+    <Content Include="bin\Debug\Help\html\501b0407-d36c-e400-4a33-1f55c09dc73a.htm" />
+    <Content Include="bin\Debug\Help\html\5030d4ad-057b-a43d-846b-2bd4a1c60dcb.htm" />
+    <Content Include="bin\Debug\Help\html\50fa12c7-b7c1-583c-0bc4-8f7e1b141534.htm" />
+    <Content Include="bin\Debug\Help\html\530af183-f127-fc1f-deba-1c00944e6b3c.htm" />
+    <Content Include="bin\Debug\Help\html\54749c63-cd3c-28d4-e58f-aef0ba54a65d.htm" />
+    <Content Include="bin\Debug\Help\html\54c4f18b-9584-16ba-6efd-60a335d067c9.htm" />
+    <Content Include="bin\Debug\Help\html\5550b907-067d-373b-4233-87b8fc1094dc.htm" />
+    <Content Include="bin\Debug\Help\html\565bd3e6-0b1c-fffa-bbe5-c21a7d90344b.htm" />
+    <Content Include="bin\Debug\Help\html\56c23f31-fd9f-cd85-486f-f061c5618afd.htm" />
+    <Content Include="bin\Debug\Help\html\58bc1084-49f8-983c-a903-329a5733d15b.htm" />
+    <Content Include="bin\Debug\Help\html\58bf2e49-206d-060d-17c7-a52d06dee89b.htm" />
+    <Content Include="bin\Debug\Help\html\5a888808-d463-ae01-14e3-09ef6e112324.htm" />
+    <Content Include="bin\Debug\Help\html\5ac95198-c65b-16ad-55e1-550058ea34c8.htm" />
+    <Content Include="bin\Debug\Help\html\5c06af68-a6f4-5d5a-c7dd-9a00bb439649.htm" />
+    <Content Include="bin\Debug\Help\html\5d040150-1726-9e6b-134d-719b30cfb4fd.htm" />
+    <Content Include="bin\Debug\Help\html\5e1f6579-86a0-83c3-b4c7-c39543159e90.htm" />
+    <Content Include="bin\Debug\Help\html\5e47bb03-ae6a-6a0d-ee49-34167f33866c.htm" />
+    <Content Include="bin\Debug\Help\html\5e6fcea5-0409-56cb-c549-90ed3c553d50.htm" />
+    <Content Include="bin\Debug\Help\html\5f6785e2-7590-65d0-05c9-f7623b6a12dc.htm" />
+    <Content Include="bin\Debug\Help\html\60cf4d11-e663-66b7-964c-449c2d38ec5a.htm" />
+    <Content Include="bin\Debug\Help\html\62d8b8ef-19c8-59ea-673b-717699592a60.htm" />
+    <Content Include="bin\Debug\Help\html\64a9e7b2-9104-db52-45d0-44c9d9db4d82.htm" />
+    <Content Include="bin\Debug\Help\html\64e70906-22be-71a5-13c3-b16070f635ae.htm" />
+    <Content Include="bin\Debug\Help\html\64f06990-f9fc-d542-047d-eb84c9243641.htm" />
+    <Content Include="bin\Debug\Help\html\64ffe175-10f2-b372-77bb-3cca47852dee.htm" />
+    <Content Include="bin\Debug\Help\html\65bc7e68-ed0f-ab99-cf19-963fb186d511.htm" />
+    <Content Include="bin\Debug\Help\html\6639f932-648d-563f-487c-fd4fa53198b2.htm" />
+    <Content Include="bin\Debug\Help\html\6aa372e3-b49a-63c3-ac47-ea4c43cfd5ac.htm" />
+    <Content Include="bin\Debug\Help\html\6bab8832-15d5-bfa5-3666-9af46d846136.htm" />
+    <Content Include="bin\Debug\Help\html\6c70bad4-bc87-8b29-3d47-f235766f702f.htm" />
+    <Content Include="bin\Debug\Help\html\6d431fd1-614d-5a5e-b31e-17ffad7e4e29.htm" />
+    <Content Include="bin\Debug\Help\html\6e092788-9eec-d6ec-d233-3611535f1b09.htm" />
+    <Content Include="bin\Debug\Help\html\6ebabc1f-9a5e-802f-6365-c2b429ea1818.htm" />
+    <Content Include="bin\Debug\Help\html\6f8613ef-b927-b8cd-010c-8236d24c312a.htm" />
+    <Content Include="bin\Debug\Help\html\6fb44978-9211-cc27-645c-837ab69e4f26.htm" />
+    <Content Include="bin\Debug\Help\html\6fc2fbab-9102-a511-a848-95688c220d2d.htm" />
+    <Content Include="bin\Debug\Help\html\72b4c4d1-f1ef-d17a-6447-8463de05f38c.htm" />
+    <Content Include="bin\Debug\Help\html\736cca86-e184-c65c-2b3f-f96f38e920b1.htm" />
+    <Content Include="bin\Debug\Help\html\743b90f0-f55f-300f-ca49-4697e8b71b9e.htm" />
+    <Content Include="bin\Debug\Help\html\74ccfe2b-706d-3e49-5f17-270efed7128b.htm" />
+    <Content Include="bin\Debug\Help\html\77582338-70e2-9a4e-967b-a97a8d48bc7b.htm" />
+    <Content Include="bin\Debug\Help\html\77888977-1924-b4dd-7de7-802959eec2a9.htm" />
+    <Content Include="bin\Debug\Help\html\789cf38a-5be9-15bf-af6d-fc277948b73b.htm" />
+    <Content Include="bin\Debug\Help\html\78abe989-6d9c-1902-5cc9-b5582d65718c.htm" />
+    <Content Include="bin\Debug\Help\html\79b28414-8101-1d14-ab78-48d7c46b8792.htm" />
+    <Content Include="bin\Debug\Help\html\7a4d6349-a209-3f38-70bc-20da432115ee.htm" />
+    <Content Include="bin\Debug\Help\html\7afa3ff5-9e2f-70cb-063c-7e76ec5a395d.htm" />
+    <Content Include="bin\Debug\Help\html\7b128aff-5056-edac-d91b-e8a987bff6b4.htm" />
+    <Content Include="bin\Debug\Help\html\7d9bb7b6-d863-5f24-facb-f6c1c29780fe.htm" />
+    <Content Include="bin\Debug\Help\html\7dab912f-0d95-bba5-e1e3-5febd74b7aa6.htm" />
+    <Content Include="bin\Debug\Help\html\7e57c195-4d46-e2ff-868d-1fe1bf4e0233.htm" />
+    <Content Include="bin\Debug\Help\html\80c7f2a0-d2e3-ec2b-dba4-7f63a4822c8f.htm" />
+    <Content Include="bin\Debug\Help\html\81e38467-6337-5a18-e285-18b19b38d33a.htm" />
+    <Content Include="bin\Debug\Help\html\8290dab6-9406-136e-1f5b-ec0f95f6d79d.htm" />
+    <Content Include="bin\Debug\Help\html\82fe4b5f-3799-de05-1506-ef9191b2b078.htm" />
+    <Content Include="bin\Debug\Help\html\833cd33a-0d20-17f4-d4f3-93ee492a1860.htm" />
+    <Content Include="bin\Debug\Help\html\836d411f-2346-a409-13fb-5c8d2e3133e6.htm" />
+    <Content Include="bin\Debug\Help\html\871aa8d8-815a-2369-f114-bdc1901c0c07.htm" />
+    <Content Include="bin\Debug\Help\html\88129729-e8b2-f52a-5907-78fd2d397cf7.htm" />
+    <Content Include="bin\Debug\Help\html\88868dfb-e8c9-dab3-ced2-11562d5e1c94.htm" />
+    <Content Include="bin\Debug\Help\html\888f1fd5-c82f-7dc3-db03-d9bd52b38c0c.htm" />
+    <Content Include="bin\Debug\Help\html\8b615cbb-55c9-ed13-7e8d-22efc2dc0ef3.htm" />
+    <Content Include="bin\Debug\Help\html\8c3a2eaf-5e5f-862c-5815-a8c493ff7106.htm" />
+    <Content Include="bin\Debug\Help\html\8f702984-7e6d-0935-5593-0b910d74a473.htm" />
+    <Content Include="bin\Debug\Help\html\8fa0d2ed-9275-646f-282a-80b67b2ffa2a.htm" />
+    <Content Include="bin\Debug\Help\html\8fc03b09-9783-95f5-2547-a6653826839c.htm" />
+    <Content Include="bin\Debug\Help\html\9014d32c-082e-7135-2723-b22eeea8b225.htm" />
+    <Content Include="bin\Debug\Help\html\91479f71-81db-b607-a058-3ea4c1ca1d38.htm" />
+    <Content Include="bin\Debug\Help\html\928e114c-375d-1ea4-2933-bc017371bb2d.htm" />
+    <Content Include="bin\Debug\Help\html\930f2178-2d39-5889-69c4-8a531792616e.htm" />
+    <Content Include="bin\Debug\Help\html\93e219d1-5d10-aac8-b12e-07e4f5b8de7d.htm" />
+    <Content Include="bin\Debug\Help\html\9417b83b-01f8-afff-2d2b-c35bb7fe5415.htm" />
+    <Content Include="bin\Debug\Help\html\9509a378-c0d1-c450-162a-d3bfdd278729.htm" />
+    <Content Include="bin\Debug\Help\html\9593f3d0-3f18-3f6b-0b15-dc654131d956.htm" />
+    <Content Include="bin\Debug\Help\html\96f0ce1b-03d2-0711-eb80-95fba4ae16ed.htm" />
+    <Content Include="bin\Debug\Help\html\97ac419a-b22e-23be-741b-7dbcd709e619.htm" />
+    <Content Include="bin\Debug\Help\html\97b5271f-6830-4841-1d4f-5c8ce8e300ec.htm" />
+    <Content Include="bin\Debug\Help\html\98a5d81c-2470-6dca-d104-2cffa3f56c69.htm" />
+    <Content Include="bin\Debug\Help\html\9a5581f9-41a7-aa81-1a88-b3176bcbd879.htm" />
+    <Content Include="bin\Debug\Help\html\9d42ddf6-3fcc-7717-3157-8719bd633d47.htm" />
+    <Content Include="bin\Debug\Help\html\9ddc185d-6c1f-335d-809b-c0fb29a9b28a.htm" />
+    <Content Include="bin\Debug\Help\html\9fb71561-addf-5321-b6cc-3bdbc59ad098.htm" />
+    <Content Include="bin\Debug\Help\html\9fc03c1b-6661-f378-a0a2-26269ea4ea1f.htm" />
+    <Content Include="bin\Debug\Help\html\a2517793-a120-3d33-e603-2d02ecbe5dbd.htm" />
+    <Content Include="bin\Debug\Help\html\a2bcd94c-7622-3adc-ccfc-6860d16812b6.htm" />
+    <Content Include="bin\Debug\Help\html\a2d1355b-c9df-4cc5-46f5-a8603446331d.htm" />
+    <Content Include="bin\Debug\Help\html\a483d275-0ee0-975a-8937-ca8e20f8bab9.htm" />
+    <Content Include="bin\Debug\Help\html\a52f7651-943a-8c2e-8e14-527caccc720e.htm" />
+    <Content Include="bin\Debug\Help\html\a60b7ce9-df74-4ec9-d887-302f5ac7dd64.htm" />
+    <Content Include="bin\Debug\Help\html\a6a75e97-ff59-3d60-310d-e39550788c0d.htm" />
+    <Content Include="bin\Debug\Help\html\aa3eb3fd-f2be-744e-7389-e979955968a4.htm" />
+    <Content Include="bin\Debug\Help\html\aaf920a3-80e7-c730-4251-473cb99440a3.htm" />
+    <Content Include="bin\Debug\Help\html\ac7c7930-8755-adbd-8c9b-be3f5095106b.htm" />
+    <Content Include="bin\Debug\Help\html\ac99ce49-82b3-2e9c-5c49-208e975b3746.htm" />
+    <Content Include="bin\Debug\Help\html\adfe599c-8007-ee18-56f0-9355125fdca0.htm" />
+    <Content Include="bin\Debug\Help\html\ae2921b6-b0a7-8e29-c219-e7968a21f732.htm" />
+    <Content Include="bin\Debug\Help\html\af0b4e1d-eeab-4ebb-5ccc-a17325459c0e.htm" />
+    <Content Include="bin\Debug\Help\html\af2cbb01-42e2-27a0-6810-04110a6a9a30.htm" />
+    <Content Include="bin\Debug\Help\html\b008407c-40ce-0c5e-9ad0-f1c8a2812b1c.htm" />
+    <Content Include="bin\Debug\Help\html\b090a7f9-2b9b-b639-85db-b3c0b5aaa800.htm" />
+    <Content Include="bin\Debug\Help\html\b12c276e-4f91-fb81-cb46-ec8a31c7d387.htm" />
+    <Content Include="bin\Debug\Help\html\b17bdc20-9a47-0839-5ae5-5a6987191c25.htm" />
+    <Content Include="bin\Debug\Help\html\b30542ab-b54e-29a2-dd7e-3d1d10a09b48.htm" />
+    <Content Include="bin\Debug\Help\html\b37573b0-6b11-3d58-e198-d2336c04f248.htm" />
+    <Content Include="bin\Debug\Help\html\b3b9baef-c8f7-4dd2-9d43-a3c4176394cc.htm" />
+    <Content Include="bin\Debug\Help\html\b3cbb302-a59f-5098-9ed9-5c51d2e86dbd.htm" />
+    <Content Include="bin\Debug\Help\html\b5bd60bf-7bda-83c7-3fc4-cb912f651b36.htm" />
+    <Content Include="bin\Debug\Help\html\b5d7c57a-d19b-a8ff-d275-c42412c5ba34.htm" />
+    <Content Include="bin\Debug\Help\html\b5f0691e-4cbc-c9c9-5d96-684d82a77458.htm" />
+    <Content Include="bin\Debug\Help\html\b60c7327-a1aa-ecc4-9b53-f8220ed850eb.htm" />
+    <Content Include="bin\Debug\Help\html\b758a268-ba9a-cc6e-7510-2d640076b69a.htm" />
+    <Content Include="bin\Debug\Help\html\b7dea4a8-d715-f309-e27c-cc68991fdbea.htm" />
+    <Content Include="bin\Debug\Help\html\ba263b14-52d3-a89d-bfc2-2b2f8d2c88b3.htm" />
+    <Content Include="bin\Debug\Help\html\baa17e08-dcb2-7e02-49a7-f07a0e899c28.htm" />
+    <Content Include="bin\Debug\Help\html\bd13f9a7-3da7-209d-c33d-c0d7971fc896.htm" />
+    <Content Include="bin\Debug\Help\html\bd2e20ce-5db4-781f-7232-c63d95da181f.htm" />
+    <Content Include="bin\Debug\Help\html\be44f8e7-dd76-1b83-2c63-069a77a9f949.htm" />
+    <Content Include="bin\Debug\Help\html\be887252-fc25-2357-d68e-ce9f095ecff2.htm" />
+    <Content Include="bin\Debug\Help\html\c1777893-394d-e825-bc5d-7de651136c65.htm" />
+    <Content Include="bin\Debug\Help\html\c211e497-975f-2cb1-9e0e-0e100c23cade.htm" />
+    <Content Include="bin\Debug\Help\html\c30abf5a-114c-e069-6a1c-e389d49f3dc5.htm" />
+    <Content Include="bin\Debug\Help\html\c3589999-dce3-7f5d-ff2f-8ef472bbf1d9.htm" />
+    <Content Include="bin\Debug\Help\html\c37e1ead-4254-d105-d02b-909ba87d8006.htm" />
+    <Content Include="bin\Debug\Help\html\c466ae2a-b932-bde9-0112-8c2000a5a276.htm" />
+    <Content Include="bin\Debug\Help\html\c468fe8d-8a40-6900-1251-e8aa8d18e750.htm" />
+    <Content Include="bin\Debug\Help\html\c4f81af7-5f7a-7776-7612-c4962f5f0aa9.htm" />
+    <Content Include="bin\Debug\Help\html\c55d2ca3-a9e5-0961-e9c2-6aa37271351f.htm" />
+    <Content Include="bin\Debug\Help\html\c6870267-8d7a-bf45-2192-dbd6bed957e1.htm" />
+    <Content Include="bin\Debug\Help\html\cb608937-7723-ef71-e4bb-cb9bdba066a0.htm" />
+    <Content Include="bin\Debug\Help\html\cba90074-f95c-5892-b4df-27f5c142de90.htm" />
+    <Content Include="bin\Debug\Help\html\cc171f4f-fcad-2832-8309-0449ca6913b7.htm" />
+    <Content Include="bin\Debug\Help\html\cc58114b-cbc1-87c1-17d2-ac7e20ceff71.htm" />
+    <Content Include="bin\Debug\Help\html\cca05acc-2f46-3729-8f1a-678c79ade513.htm" />
+    <Content Include="bin\Debug\Help\html\cd005547-8560-1d19-5ef1-8ca93f184809.htm" />
+    <Content Include="bin\Debug\Help\html\d09f934e-cb50-3bb7-3baf-339743083179.htm" />
+    <Content Include="bin\Debug\Help\html\d154c933-49a5-f360-b12e-a1d4b4304b34.htm" />
+    <Content Include="bin\Debug\Help\html\d1ff84f9-e8d3-3f4f-cc81-d3c05a659c7c.htm" />
+    <Content Include="bin\Debug\Help\html\d3c14516-8aec-6ad4-1b44-631edd6836db.htm" />
+    <Content Include="bin\Debug\Help\html\d3e37414-5b5b-89d0-545c-afd2dc658f28.htm" />
+    <Content Include="bin\Debug\Help\html\d50bb86c-7998-3af1-7f7a-20bbe93955d1.htm" />
+    <Content Include="bin\Debug\Help\html\d7408625-f3d4-5a4b-97dd-d1f2f7ee309f.htm" />
+    <Content Include="bin\Debug\Help\html\d76b47dc-68f8-b176-e3a7-5018e20aaf88.htm" />
+    <Content Include="bin\Debug\Help\html\d7e935ca-ac7c-6f4c-7c4f-9a623759fe20.htm" />
+    <Content Include="bin\Debug\Help\html\d836afde-27a7-9f7e-04d2-d0e1b12e33c3.htm" />
+    <Content Include="bin\Debug\Help\html\d8fdd79c-8bf3-82f2-630e-db6fdee943b9.htm" />
+    <Content Include="bin\Debug\Help\html\d980b9a6-4e45-b36b-4f8e-a4baa6cd18e1.htm" />
+    <Content Include="bin\Debug\Help\html\da206268-ce57-1286-4012-8306fcecb3f7.htm" />
+    <Content Include="bin\Debug\Help\html\db53d084-bbe1-da80-21db-d4dce1f384e1.htm" />
+    <Content Include="bin\Debug\Help\html\dbbb6581-6459-ba22-60ee-256b31007710.htm" />
+    <Content Include="bin\Debug\Help\html\dcb5db79-fe7b-e0ca-48cb-b8c0ebc4cff2.htm" />
+    <Content Include="bin\Debug\Help\html\e1550d35-6c3e-32cf-24e7-530871e629b1.htm" />
+    <Content Include="bin\Debug\Help\html\e19ca0e5-954b-9071-f0e5-f2c3f5ede30f.htm" />
+    <Content Include="bin\Debug\Help\html\e586eac7-23d5-19ef-eddc-a4f4bc672d10.htm" />
+    <Content Include="bin\Debug\Help\html\e600c003-4fa2-87b4-f9b3-3f03066fc76f.htm" />
+    <Content Include="bin\Debug\Help\html\e6e73ce1-cf03-999f-0137-b617d97b7df6.htm" />
+    <Content Include="bin\Debug\Help\html\e7328d6f-1b38-d38b-e76d-394a7f9d6cbc.htm" />
+    <Content Include="bin\Debug\Help\html\e74b9167-a271-1d73-b4e0-dae4796fd397.htm" />
+    <Content Include="bin\Debug\Help\html\e7a189e6-61b0-820e-7b58-acef63843d69.htm" />
+    <Content Include="bin\Debug\Help\html\e81d0303-8244-0005-9f97-9bd4b687864b.htm" />
+    <Content Include="bin\Debug\Help\html\eac347c6-a2f6-afd2-0b61-a72e07241e09.htm" />
+    <Content Include="bin\Debug\Help\html\eaec4a9a-046a-0e40-d214-6f0d15432821.htm" />
+    <Content Include="bin\Debug\Help\html\ec32f580-39c4-156e-1f25-d06a87e13fc2.htm" />
+    <Content Include="bin\Debug\Help\html\ef035f9d-45eb-8be3-a9e2-979f28294b78.htm" />
+    <Content Include="bin\Debug\Help\html\f1bfc23e-5750-1709-db4a-744692df01a8.htm" />
+    <Content Include="bin\Debug\Help\html\f2d4e2cd-c369-85d2-e557-bf67b03a439a.htm" />
+    <Content Include="bin\Debug\Help\html\f5987013-adac-e404-dcce-3928450ab8a8.htm" />
+    <Content Include="bin\Debug\Help\html\f6613cdf-fc95-414c-7f7e-972430d64d75.htm" />
+    <Content Include="bin\Debug\Help\html\f685eba4-4599-9360-68e4-913def4db960.htm" />
+    <Content Include="bin\Debug\Help\html\f6c6cd8f-3364-75f1-8456-b1b33e3f0394.htm" />
+    <Content Include="bin\Debug\Help\html\f7611e0b-cdf8-856c-069c-76e4a91f4954.htm" />
+    <Content Include="bin\Debug\Help\html\faa818b6-b355-75b5-5dcf-8888ebcef806.htm" />
+    <Content Include="bin\Debug\Help\html\fad4710e-6475-fb2d-9076-6ad70fa68676.htm" />
+    <Content Include="bin\Debug\Help\html\fb2faf19-006c-1ef4-887e-41ecbfd2ead2.htm" />
+    <Content Include="bin\Debug\Help\html\fd364133-7464-f5fa-6aa9-8f13f40f78a2.htm" />
+    <Content Include="bin\Debug\Help\html\fe22eb36-1d52-ed86-2527-9586db452a40.htm" />
+    <Content Include="bin\Debug\Help\icons\favicon.ico" />
+    <Content Include="bin\Debug\Help\index.html" />
+    <Content Include="bin\Debug\Help\PageNotFound.html" />
+    <Content Include="bin\Debug\Help\scripts\clipboard.min.js" />
+    <Content Include="bin\Debug\Help\scripts\highlight.min.js" />
+    <Content Include="bin\Debug\Help\scripts\jquery-3.5.1.min.js" />
+    <Content Include="bin\Debug\Help\scripts\presentationStyle.js" />
+    <Content Include="bin\Debug\Help\search.html" />
+    <Content Include="bin\Debug\Help\SearchHelp.aspx" />
+    <Content Include="bin\Debug\Help\SearchHelp.inc.php" />
+    <Content Include="bin\Debug\Help\SearchHelp.php" />
+    <Content Include="bin\Debug\Help\toc\IDA.xml" />
+    <Content Include="bin\Debug\Help\toc\IDAA.xml" />
+    <Content Include="bin\Debug\Help\toc\IDAAB.xml" />
+    <Content Include="bin\Debug\Help\toc\IDAAC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDAAD.xml" />
+    <Content Include="bin\Debug\Help\toc\IDAB.xml" />
+    <Content Include="bin\Debug\Help\toc\IDABB.xml" />
+    <Content Include="bin\Debug\Help\toc\IDABC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDABD.xml" />
+    <Content Include="bin\Debug\Help\toc\IDAC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDACAA.xml" />
+    <Content Include="bin\Debug\Help\toc\IDACAE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDACB.xml" />
+    <Content Include="bin\Debug\Help\toc\IDACBE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDACC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDACCE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDACD.xml" />
+    <Content Include="bin\Debug\Help\toc\IDACDE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDACEE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDACFE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDACGE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDACHE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDACIE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDACJE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDACKE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDAD.xml" />
+    <Content Include="bin\Debug\Help\toc\IDADB.xml" />
+    <Content Include="bin\Debug\Help\toc\IDADC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDADD.xml" />
+    <Content Include="bin\Debug\Help\toc\IDAE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDAEB.xml" />
+    <Content Include="bin\Debug\Help\toc\IDAEC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDAF.xml" />
+    <Content Include="bin\Debug\Help\toc\IDAFC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDAGC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDAHC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDAIC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDAJC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDAKC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDALC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDB.xml" />
+    <Content Include="bin\Debug\Help\toc\IDBAD.xml" />
+    <Content Include="bin\Debug\Help\toc\IDBAF.xml" />
+    <Content Include="bin\Debug\Help\toc\IDBB.xml" />
+    <Content Include="bin\Debug\Help\toc\IDBBB.xml" />
+    <Content Include="bin\Debug\Help\toc\IDBBD.xml" />
+    <Content Include="bin\Debug\Help\toc\IDBC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDBCB.xml" />
+    <Content Include="bin\Debug\Help\toc\IDBCD.xml" />
+    <Content Include="bin\Debug\Help\toc\IDBD.xml" />
+    <Content Include="bin\Debug\Help\toc\IDBDB.xml" />
+    <Content Include="bin\Debug\Help\toc\IDBDD.xml" />
+    <Content Include="bin\Debug\Help\toc\IDBE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDBEB.xml" />
+    <Content Include="bin\Debug\Help\toc\IDC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDCAA.xml" />
+    <Content Include="bin\Debug\Help\toc\IDCAE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDCB.xml" />
+    <Content Include="bin\Debug\Help\toc\IDCBE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDCC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDCCE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDCD.xml" />
+    <Content Include="bin\Debug\Help\toc\IDCDE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDCE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDCEE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDCFE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDCGE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDCHE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDCIE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDCJE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDCKE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDD.xml" />
+    <Content Include="bin\Debug\Help\toc\IDDB.xml" />
+    <Content Include="bin\Debug\Help\toc\IDDC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDDD.xml" />
+    <Content Include="bin\Debug\Help\toc\IDDE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDEB.xml" />
+    <Content Include="bin\Debug\Help\toc\IDEBE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDEC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDECE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDEE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDF.xml" />
+    <Content Include="bin\Debug\Help\toc\IDFC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDFE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDGC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDGE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDHC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDHE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDIC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDIE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDJC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDJE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDKC.xml" />
+    <Content Include="bin\Debug\Help\toc\IDKE.xml" />
+    <Content Include="bin\Debug\Help\toc\IDLC.xml" />
+    <Content Include="bin\Debug\Help\toc\Root.xml" />
+    <Content Include="bin\Debug\productos.xml" />
+    <Content Include="treasurechesticon_98562.ico" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\flecha.png" />
+    <None Include="Resources\save_24dp_0000F5_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\mop_24dp_0000F5_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\cancel_24dp_EA3323_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\undo_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\close_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\content_copy_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\content_cut_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" />
+    <None Include="Resources\content_paste_go_16dp_000000_FILL0_wght400_GRAD0_opsz20.png" />
+    <None Include="Resources\delete_16dp_000000_FILL0_wght400_GRAD0_opsz20.png" />
+    <None Include="Resources\play_arrow_16dp_000000_FILL0_wght400_GRAD0_opsz20.png" />
+    <Content Include="Resources\videos\insertar.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\videos\importExport.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\videos\conModElimi.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

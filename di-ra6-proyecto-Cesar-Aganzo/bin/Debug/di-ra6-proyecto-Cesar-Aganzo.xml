@@ -1,0 +1,2415 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>di-ra5-proyecto-Cesar-Aganzo</name>
+    </assembly>
+    <members>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlApp">
+            <summary>
+            Clase estática que gestiona el estado global de la aplicación y mantiene listas principales de datos.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlApp.aFaq">
+            <summary>
+            Indica si la aplicación debe abrir el formulario FAQ.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlApp.aAyuda">
+            <summary>
+            Indica si la aplicación debe abrir el formulario Ayuda.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlApp.salir">
+            <summary>
+            Indica si la aplicación debe cerrarse.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlApp.noPregunta">
+            <summary>
+            Controla si se omiten ciertas confirmaciones en la aplicación.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlApp.toDelete">
+            <summary>
+            Marca si un elemento debe ser eliminado.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlApp.listCoches">
+            <summary>
+            Lista principal que almacena todos los coches registrados en la aplicación.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlApp.productList">
+            <summary>
+            Lista principal que almacena todos los productos registrados en la aplicación.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlApp.clienteList">
+            <summary>
+            Lista principal que almacena todos los clientes registrados en la aplicación.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlApp.empleadosList">
+            <summary>
+            Lista principal que almacena todos los empleados registrados en la aplicación.
+            </summary>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlCliente">
+            <summary>
+            Clase estática que gestiona las operaciones CRUD para la lista de clientes.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlCliente.listClients">
+            <summary>
+            Lista principal de clientes, obtenida desde el controlador principal de la aplicación.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlCliente.listClientsAux">
+            <summary>
+            Lista auxiliar de clientes que puede usarse para operaciones de filtrado o búsquedas temporales.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlCliente.id">
+            <summary>
+            Identificador único que se incrementará automáticamente al añadir nuevos clientes.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlCliente.aniadirCliente(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente})">
+            <summary>
+            Añade una lista de clientes al registro principal, asignando IDs únicos.
+            </summary>
+            <param name="clientes">Lista de clientes a añadir.</param>
+            <returns>La cantidad de clientes añadidos.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlCliente.modificarCliente(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente})">
+            <summary>
+            Modifica los datos de los clientes existentes basándose en su ID.
+            </summary>
+            <param name="clientes">Lista de clientes con los datos actualizados.</param>
+            <returns>La cantidad de clientes modificados.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlCliente.eliminarCliente(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente})">
+            <summary>
+            Elimina clientes de la lista principal basándose en su ID.
+            </summary>
+            <param name="clientes">Lista de clientes a eliminar.</param>
+            <returns>La cantidad de clientes eliminados.</returns>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlCoche">
+            <summary>
+            Clase estática que gestiona las operaciones CRUD para la lista de coches.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlCoche.listCoche">
+            <summary>
+            Lista principal de coches, obtenida desde el controlador principal de la aplicación.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlCoche.listCocheAux">
+            <summary>
+            Lista auxiliar de coches, útil para operaciones de filtrado o búsquedas temporales.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlCoche.id">
+            <summary>
+            Identificador único que se incrementará automáticamente al añadir nuevos coches.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlCoche.aniadirCoche(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche})">
+            <summary>
+            Añade una lista de coches al registro principal, asignando IDs únicos.
+            </summary>
+            <param name="coches">Lista de coches a añadir.</param>
+            <returns>La cantidad de coches añadidos.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlCoche.modificarCoche(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche})">
+            <summary>
+            Modifica los datos de los coches existentes basándose en su ID.
+            </summary>
+            <param name="coches">Lista de coches con los datos actualizados.</param>
+            <returns>La cantidad de coches modificados.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlCoche.eliminarCoche(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche})">
+            <summary>
+            Elimina coches de la lista principal basándose en su ID.
+            </summary>
+            <param name="coches">Lista de coches a eliminar.</param>
+            <returns>La cantidad de coches eliminados.</returns>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlEmpleado">
+            <summary>
+            Clase estática que gestiona las operaciones CRUD de la lista de empleados.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlEmpleado.listEmple">
+            <summary>
+            Lista principal de empleados que se utilizará para las operaciones CRUD.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlEmpleado.listEmpleAux">
+            <summary>
+            Lista auxiliar de empleados que podría usarse para filtrados o búsquedas temporales.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlEmpleado.id">
+            <summary>
+            Identificador único que se incrementará automáticamente al añadir nuevos empleados.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlEmpleado.aniadirEmpleado(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado})">
+            <summary>
+            Añade una lista de empleados al registro principal, asignando IDs únicos.
+            </summary>
+            <param name="empleados">Lista de empleados a añadir.</param>
+            <returns>La cantidad de empleados añadidos.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlEmpleado.modificarEmpleado(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado})">
+            <summary>
+            Modifica los datos de los empleados existentes basándose en su ID.
+            </summary>
+            <param name="empleados">Lista de empleados con los datos actualizados.</param>
+            <returns>La cantidad de empleados modificados.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlEmpleado.eliminarEmpleado(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado})">
+            <summary>
+            Elimina empleados de la lista principal basándose en su ID.
+            </summary>
+            <param name="empleados">Lista de empleados a eliminar.</param>
+            <returns>La cantidad de empleados eliminados.</returns>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlProducto">
+            <summary>
+            Clase estática que gestiona las operaciones CRUD de la lista de productos.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlProducto.listProductos">
+            <summary>
+            Lista principal que almacena todos los productos disponibles.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlProducto.listProductosAux">
+            <summary>
+            Lista auxiliar que puede utilizarse para operaciones intermedias o temporales con productos.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlProducto.id">
+            <summary>
+            Identificador único utilizado para asignar IDs a los nuevos productos.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlProducto.aniadirProducto(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto})">
+            <summary>
+            Añade una lista de productos a la lista principal, asignando IDs automáticamente.
+            </summary>
+            <param name="productos">Lista de productos a añadir.</param>
+            <returns>El número de productos añadidos.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlProducto.modificarProducto(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto})">
+            <summary>
+            Modifica productos existentes en la lista principal según el ID proporcionado.
+            </summary>
+            <param name="productos">Lista de productos con la información actualizada.</param>
+            <returns>El número de productos modificados.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.ControlProducto.eliminarProducto(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto})">
+            <summary>
+            Elimina productos de la lista principal según sus IDs.
+            </summary>
+            <param name="productos">Lista de productos que se desea eliminar.</param>
+            <returns>El número de productos eliminados.</returns>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.ClienteDaoBin">
+            <summary>
+            Clase DAO (Data Access Object) para gestionar la serialización y deserialización de datos de clientes en formato binario.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.ClienteDaoBin.escribirBin(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente})">
+            <summary>
+            Serializa y guarda la lista de clientes en un archivo binario llamado "clientes.bin".
+            </summary>
+            <param name="clientes">Lista de clientes a serializar.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.ClienteDaoBin.leerBin(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente}@)">
+            <summary>
+            Deserializa y carga la lista de clientes desde el archivo "clientes.bin".
+            </summary>
+            <param name="clientes">Referencia a la lista de clientes donde se cargarán los datos.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.ClienteDaoBin.leerBin2(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente})">
+            <summary>
+            Deserializa la lista de clientes desde "clientes.bin" solo si el archivo existe.
+            </summary>
+            <param name="clientes">Lista de clientes donde se añadirán los datos deserializados.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.ClienteDaoJson">
+            <summary>
+            Clase DAO (Data Access Object) para gestionar la serialización y deserialización de datos de clientes en formato JSON.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.ClienteDaoJson.escribirJson(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente})">
+            <summary>
+            Serializa y guarda la lista de clientes en un archivo JSON llamado "clientes.json".
+            </summary>
+            <param name="clientes">Lista de clientes a serializar.</param>
+            <returns>Devuelve un mensaje que indica si la operación se realizó correctamente o no.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.ClienteDaoJson.leerJson(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente})">
+            <summary>
+            Deserializa y carga la lista de clientes desde el archivo "clientes.json".
+            </summary>
+            <param name="clienteList">Lista de clientes donde se cargarán los datos deserializados.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.ClienteDaoXml">
+            <summary>
+            Clase DAO (Data Access Object) para gestionar la serialización y deserialización de datos de clientes en formato XML.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.ClienteDaoXml.escribirXML(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente})">
+            <summary>
+            Serializa y guarda la lista de clientes en un archivo XML llamado "clientes.xml".
+            </summary>
+            <param name="clientes">Lista de clientes a serializar.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.ClienteDaoXml.leerXml(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente}@)">
+            <summary>
+            Deserializa y carga la lista de clientes desde el archivo "clientes.xml".
+            </summary>
+            <param name="clientes">Referencia a la lista de clientes donde se cargarán los datos deserializados.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.ClienteDaoXml.leerXml2(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente})">
+            <summary>
+            Deserializa y carga la lista de clientes desde el archivo "clientes.xml".
+            </summary>
+            <param name="clientes">Lista de clientes donde se cargarán los datos deserializados.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.CochesDaoBin">
+            <summary>
+            Clase DAO (Data Access Object) para gestionar la serialización y deserialización de datos de coches en formato binario.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.CochesDaoBin.escribirBin(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche})">
+            <summary>
+            Serializa y guarda la lista de coches en un archivo binario llamado "coches.bin".
+            </summary>
+            <param name="coches">Lista de coches a serializar.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.CochesDaoBin.leerBin(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche}@)">
+            <summary>
+            Deserializa y carga la lista de coches desde el archivo "coches.bin".
+            </summary>
+            <param name="coches">Referencia a la lista de coches donde se cargarán los datos deserializados.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.CochesDaoBin.leerBin2(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche})">
+            <summary>
+            Deserializa y carga la lista de coches desde el archivo "coches.bin" solo si el archivo existe.
+            </summary>
+            <param name="coches">Lista de coches donde se cargarán los datos deserializados.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.CochesDaoJson">
+            <summary>
+            Clase DAO (Data Access Object) para gestionar la serialización y deserialización de datos de coches en formato JSON.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.CochesDaoJson.escribirJson(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche})">
+            <summary>
+            Serializa y guarda la lista de coches en un archivo JSON llamado "coches.json".
+            </summary>
+            <param name="coches">Lista de coches a serializar.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.CochesDaoJson.leerJson(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche})">
+            <summary>
+            Deserializa y carga la lista de coches desde el archivo "coches.json".
+            </summary>
+            <param name="coches">Lista de coches donde se cargarán los datos deserializados.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.CochesDaoXml">
+            <summary>
+            Clase DAO (Data Access Object) para gestionar la serialización y deserialización de datos de coches en formato XML.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.CochesDaoXml.escribirXML(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche})">
+            <summary>
+            Serializa y guarda la lista de coches en un archivo XML llamado "coches.xml".
+            </summary>
+            <param name="coches">Lista de coches a serializar.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.CochesDaoXml.leerXml(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche}@)">
+            <summary>
+            Deserializa y carga la lista de coches desde el archivo "coches.xml".
+            </summary>
+            <param name="coches">Referencia a la lista de coches donde se cargarán los datos deserializados.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.CochesDaoXml.leerXml2(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche})">
+            <summary>
+            Deserializa la lista de coches desde "coches.xml" y actualiza la lista proporcionada si los datos se cargan correctamente.
+            </summary>
+            <param name="coches">Lista de coches donde se añadirán los datos deserializados.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.EmpleadoDaoJson">
+            <summary>
+            Clase DAO (Data Access Object) para gestionar la serialización y deserialización de datos de empleados en formato JSON.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.EmpleadoDaoJson.escribirJson(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado})">
+            <summary>
+            Serializa y guarda la lista de empleados en un archivo JSON llamado "empleados.json".
+            </summary>
+            <param name="empleados">Lista de empleados a serializar.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.EmpleadoDaoJson.leerJson(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado})">
+            <summary>
+            Deserializa y carga la lista de empleados desde el archivo "empleados.json".
+            </summary>
+            <param name="empleados">Lista de empleados donde se cargarán los datos deserializados.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.EmpleadoDaoBin">
+            <summary>
+            Clase DAO (Data Access Object) para gestionar la serialización y deserialización de datos de empleados en formato binario.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.EmpleadoDaoBin.escribirBin(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado})">
+            <summary>
+            Serializa y guarda la lista de empleados en un archivo binario llamado "empleado.bin".
+            </summary>
+            <param name="empleados">Lista de empleados a serializar.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.EmpleadoDaoBin.leerBin(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado}@)">
+            <summary>
+            Deserializa y carga la lista de empleados desde el archivo "empleado.bin".
+            </summary>
+            <param name="empleados">Referencia a la lista de empleados donde se cargarán los datos deserializados.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.EmpleadoDaoBin.leerBin2(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado})">
+            <summary>
+            Deserializa y carga la lista de empleados desde el archivo "empleados.bin" solo si el archivo existe.
+            </summary>
+            <param name="empleados">Lista de empleados donde se cargarán los datos deserializados.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.EmpleadoDaoXml">
+            <summary>
+            Clase DAO (Data Access Object) para gestionar la serialización y deserialización de datos de empleados en formato XML.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.EmpleadoDaoXml.escribirXML(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado})">
+            <summary>
+            Serializa y guarda la lista de empleados en un archivo XML llamado "empleados.xml".
+            </summary>
+            <param name="empleados">Lista de empleados a serializar.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.EmpleadoDaoXml.leerXml(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado}@)">
+            <summary>
+            Deserializa y carga la lista de empleados desde el archivo "empleados.xml".
+            </summary>
+            <param name="empleados">Referencia a la lista de empleados donde se cargarán los datos deserializados.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.EmpleadoDaoXml.leerXml2(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado})">
+            <summary>
+            Deserializa la lista de empleados desde "empleados.xml" y actualiza la lista proporcionada si los datos se cargan correctamente.
+            </summary>
+            <param name="empleados">Lista de empleados donde se añadirán los datos deserializados.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.ProductoDaoBin">
+            <summary>
+            Clase DAO (Data Access Object) para gestionar la serialización y deserialización de datos de productos en formato binario.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.ProductoDaoBin.escribirBin(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto})">
+            <summary>
+            Serializa y guarda la lista de productos en un archivo binario llamado "productos.bin".
+            </summary>
+            <param name="productos">Lista de productos a serializar.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.ProductoDaoBin.leerBin(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto}@)">
+            <summary>
+            Deserializa y carga la lista de productos desde el archivo "productos.bin".
+            </summary>
+            <param name="productos">Referencia a la lista de productos donde se cargarán los datos deserializados.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.ProductoDaoBin.leerBin2(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto})">
+            <summary>
+            Deserializa y carga la lista de productos desde el archivo "productos.bin" solo si el archivo existe.
+            </summary>
+            <param name="productos">Lista de productos donde se cargarán los datos deserializados.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.ProductoDaoJson">
+            <summary>
+            Clase DAO (Data Access Object) para gestionar la serialización y deserialización de datos de productos en formato JSON.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.ProductoDaoJson.escribirJson(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto})">
+            <summary>
+            Serializa y guarda la lista de productos en un archivo JSON llamado "productos.json".
+            </summary>
+            <param name="productos">Lista de productos a serializar.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.ProductoDaoJson.leerJson(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto})">
+            <summary>
+            Deserializa y carga la lista de productos desde el archivo "productos.json".
+            </summary>
+            <param name="productos">Lista de productos donde se cargarán los datos deserializados.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.ProductoDaoXml">
+            <summary>
+            Clase DAO (Data Access Object) para gestionar la serialización y deserialización de datos de productos en formato XML.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.ProductoDaoXml.escribirXML(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto})">
+            <summary>
+            Serializa y guarda la lista de productos en un archivo XML llamado "productos.xml".
+            </summary>
+            <param name="productos">Lista de productos a serializar.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.ProductoDaoXml.leerXml(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto}@)">
+            <summary>
+            Deserializa y carga la lista de empleados desde el archivo "empleados.xml".
+            </summary>
+            <param name="productos">Referencia a la lista de empleados donde se cargarán los datos deserializados.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Controlador.Dao.ProductoDaoXml.leerXml2(System.Collections.Generic.List{di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto})">
+            <summary>
+            Deserializa y carga la lista de productos desde el archivo "productos.xml".
+            </summary>
+            <param name="productos">Lista de productos donde se cargarán los datos deserializados.</param>
+            <returns>Devuelve "OK" si la operación se realiza correctamente, de lo contrario muestra un mensaje de error.</returns>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche">
+            <summary>
+            Representa un coche con sus características como nombre, modelo, cilindrada, precio, fecha de matriculación y si es descapotable.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche.id">
+            <summary>
+            Identificador único del coche.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche.nombre">
+            <summary>
+            Nombre del coche, generalmente marca y modelo.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche.modelo">
+            <summary>
+            Modelo del coche, especificando la versión o tipo.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche.cilindrada">
+            <summary>
+            Cilindrada del motor del coche, medida en centímetros cúbicos (cc).
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche.precio">
+            <summary>
+            Precio del coche en la moneda local.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche.matriculacion">
+            <summary>
+            Fecha de matriculación del coche, indicando cuándo fue registrado.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche.descapotable">
+            <summary>
+            Indica si el coche es descapotable (tiene techo retráctil).
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche.#ctor">
+            <summary>
+            Constructor por defecto de la clase <see cref="T:di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche"/>.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche.#ctor(System.Int32,System.String,System.String,System.Int32,System.Double,System.DateTime,System.Boolean)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche"/> con los valores especificados.
+            </summary>
+            <param name="id">Identificador único del coche.</param>
+            <param name="nombre">Nombre o marca del coche.</param>
+            <param name="modelo">Modelo específico del coche.</param>
+            <param name="cilindrada">Cilindrada del motor del coche en centímetros cúbicos (cc).</param>
+            <param name="precio">Precio de venta del coche.</param>
+            <param name="matriculacion">Fecha de matriculación del coche.</param>
+            <param name="descapotable">Indica si el coche es descapotable (true) o no (false).</param>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche.Id">
+            <summary>
+            Obtiene o establece el identificador único del coche.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche.Nombre">
+            <summary>
+            Obtiene o establece el nombre o marca del coche.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche.Modelo">
+            <summary>
+            Obtiene o establece el modelo específico del coche.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche.Cilindrada">
+            <summary>
+            Obtiene o establece la cilindrada del motor del coche en centímetros cúbicos (cc).
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche.Precio">
+            <summary>
+            Obtiene o establece el precio de venta del coche.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche.Matriculacion">
+            <summary>
+            Obtiene o establece la fecha de matriculación del coche.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Coche.Descapotable">
+            <summary>
+            Obtiene o establece si el coche es descapotable (true) o no (false).
+            </summary>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto">
+            <summary>
+            Representa un producto con sus atributos como nombre, descripción, precio,
+            fecha de caducidad y descuento aplicado.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto.id">
+            <summary>
+            Identificador único del producto.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto.name">
+            <summary>
+            Nombre del producto.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto.description">
+            <summary>
+            Descripción detallada del producto, especificando sus características.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto.precio">
+            <summary>
+            Precio del producto en la moneda local.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto.fechaCaduca">
+            <summary>
+            Fecha en que el producto caduca o pierde su validez.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto.descuento">
+            <summary>
+            Porcentaje de descuento aplicable al producto, si lo tiene.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto.#ctor">
+            <summary>
+            Constructor por defecto de la clase Producto.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto.#ctor(System.Int32,System.String,System.String,System.Double,System.DateTime,System.Int32)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto"/> con valores específicos.
+            </summary>
+            <param name="id">Identificador único del producto.</param>
+            <param name="name">Nombre del producto.</param>
+            <param name="description">Descripción breve del producto.</param>
+            <param name="precio">Precio unitario del producto.</param>
+            <param name="fechaCaduca">Fecha de caducidad del producto.</param>
+            <param name="descuento">Porcentaje de descuento aplicado al producto (0-100).</param>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto.Id">
+            <summary>
+            Obtiene o establece el identificador único del producto.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto.Name">
+            <summary>
+            Obtiene o establece el nombre del producto.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto.Description">
+            <summary>
+            Obtiene o establece la descripción del producto.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto.Precio">
+            <summary>
+            Obtiene o establece el precio del producto.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto.FechaCaduca">
+            <summary>
+            Obtiene o establece la fecha de caducidad del producto.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Producto.Descuento">
+            <summary>
+            Obtiene o establece el porcentaje de descuento aplicado al producto.
+            </summary>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente">
+            <summary>
+            Representa un cliente con información personal, estado VIP y saldo en el monedero.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente.id">
+            <summary>
+            Identificador único del cliente.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente.name">
+            <summary>
+            Nombre completo del cliente.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente.correo">
+            <summary>
+            Dirección de correo electrónico del cliente.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente.fechaNaci">
+            <summary>
+            Fecha de nacimiento del cliente.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente.vip">
+            <summary>
+            Indica si el cliente es un usuario VIP.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente.monedero">
+            <summary>
+            Cantidad de dinero disponible en el monedero del cliente.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente.#ctor">
+            <summary>
+            Constructor por defecto de la clase <see cref="T:di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente"/>.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente.#ctor(System.Int32,System.String,System.String,System.DateTime,System.Boolean,System.Double)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente"/> con los valores especificados.
+            </summary>
+            <param name="id">Identificador único del cliente.</param>
+            <param name="name">Nombre completo del cliente.</param>
+            <param name="correo">Correo electrónico del cliente.</param>
+            <param name="fechaNaci">Fecha de nacimiento del cliente.</param>
+            <param name="vip">Indica si el cliente tiene estatus VIP (true) o no (false).</param>
+            <param name="monedero">Saldo disponible en el monedero del cliente.</param>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente.Id">
+            <summary>
+            Obtiene o establece el identificador único del cliente.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente.Name">
+            <summary>
+            Obtiene o establece el nombre completo del cliente.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente.Correo">
+            <summary>
+            Obtiene o establece el correo electrónico del cliente.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente.FechaNaci">
+            <summary>
+            Obtiene o establece la fecha de nacimiento del cliente.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente.Vip">
+            <summary>
+            Obtiene o establece si el cliente tiene estatus VIP.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Cliente.Monedero">
+            <summary>
+            Obtiene o establece el saldo disponible en el monedero del cliente.
+            </summary>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado">
+            <summary>
+            Representa un empleado con sus datos personales y laborales,
+            incluyendo nombre, correo, fecha de alta, nivel, salario y tipo de jornada.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado.id">
+            <summary>
+            Identificador único del empleado.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado.name">
+            <summary>
+            Nombre completo del empleado.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado.correo">
+            <summary>
+            Dirección de correo electrónico del empleado.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado.fechaAlta">
+            <summary>
+            Fecha en que el empleado fue dado de alta en la empresa.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado.nivel">
+            <summary>
+            Nivel jerárquico del empleado dentro de la organización.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado.salario">
+            <summary>
+            Salario mensual o anual del empleado, dependiendo de la estructura de pago.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado.jornadaReducida">
+            <summary>
+            Indica si el empleado tiene jornada reducida (menos horas de trabajo).
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado.#ctor">
+            <summary>
+            Constructor por defecto de la clase Empleado.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado.#ctor(System.Int32,System.String,System.String,System.DateTime,System.Int32,System.Double,System.Boolean)">
+            <summary>
+            Inicializa una nueva instancia de la clase <see cref="T:di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado"/> con los valores especificados.
+            </summary>
+            <param name="id">Identificador único del empleado.</param>
+            <param name="name">Nombre completo del empleado.</param>
+            <param name="correo">Correo electrónico del empleado.</param>
+            <param name="fechaAlta">Fecha en la que el empleado fue dado de alta.</param>
+            <param name="nivel">Nivel o rango del empleado dentro de la organización.</param>
+            <param name="salario">Salario mensual del empleado.</param>
+            <param name="jornadaReducida">Indica si el empleado tiene jornada reducida (true) o completa (false).</param>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado.Id">
+            <summary>
+            Obtiene o establece el identificador único del empleado.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado.Name">
+            <summary>
+            Obtiene o establece el nombre completo del empleado.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado.Correo">
+            <summary>
+            Obtiene o establece el correo electrónico del empleado.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado.FechaAlta">
+            <summary>
+            Obtiene o establece la fecha en que el empleado fue dado de alta en la empresa.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado.Nivel">
+            <summary>
+            Obtiene o establece el nivel o rango del empleado dentro de la organización.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado.Salario">
+            <summary>
+            Obtiene o establece el salario mensual del empleado.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Modelo.Empleado.JornadaReducida">
+            <summary>
+            Obtiene o establece si el empleado tiene jornada reducida (true) o completa (false).
+            </summary>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAcercaDe">
+            <summary>
+            Formulario de "Acerca de" que muestra información sobre el programa.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAcercaDe.formPrincipal">
+            <summary>
+            Variable para almacenar la referencia al formulario principal, utilizada para mostrarlo después de cerrar este formulario.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAcercaDe.#ctor">
+            <summary>
+            Constructor del formulario "Acerca de". Inicializa los componentes y configura la pantalla de inicio.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAcercaDe.FormAcercaDe_Load(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando el formulario se carga. Muestra la información sobre el programa en el richTextBox.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAcercaDe.FormAcercaDe_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Evento que se ejecuta cuando el formulario se está cerrando. Muestra el formulario principal si no se está cerrando la aplicación.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAcercaDe.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAcercaDe.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAcercaDe.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAyuda">
+            <summary>
+            Formulario de ayuda que proporciona indicaciones sobre el uso de la aplicación.
+            Muestra videos explicativos y descripciones según la selección del usuario.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAyuda.formPrincipal">
+            <summary>
+            Formulario principal asociado a este formulario (para navegación entre formularios).
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAyuda.#ctor">
+            <summary>
+            Constructor del formulario de ayuda.
+            Inicializa componentes, configura el reproductor y bloquea edición del texto.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAyuda.FormAyuda_Load(System.Object,System.EventArgs)">
+            <summary>
+            Evento al cargar el formulario. Configura los ToolTips para la interfaz.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAyuda.FormAyuda_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Evento al cerrar el formulario. Asegura que el formulario principal reaparezca si no se está cerrando la aplicación.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAyuda.buttonFAQ_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento al hacer clic en el botón FAQ. Cierra la ventana actual y marca el acceso a FAQs.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAyuda.listBox1_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento al seleccionar la primera opción. Muestra video y descripción sobre la inserción de objetos.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAyuda.listBox2_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento al seleccionar la segunda opción. Muestra video y descripción sobre consulta, modificación y eliminación.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAyuda.listBox3_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento al seleccionar la tercera opción. Muestra video y descripción sobre importación y exportación.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAyuda.volverAtrasToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento al hacer clic en "Volver Atrás". Cierra el formulario actual.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAyuda.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAyuda.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAyuda.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Vista.FormPreguntasFAQ">
+            <summary>
+            Formulario que muestra las preguntas frecuentes (FAQ) y sus respuestas relacionadas con la aplicación.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormPreguntasFAQ.formPrincipal">
+            <summary>
+            Variable para almacenar la referencia al formulario principal, utilizada para mostrarlo después de cerrar este formulario.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormPreguntasFAQ.#ctor">
+            <summary>
+            Constructor del formulario "Preguntas FAQ". Inicializa los componentes y configura la pantalla de inicio.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormPreguntasFAQ.FormPreguntasFAQ_Load(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando el formulario se carga. Configura los ToolTips para los elementos de la interfaz.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormPreguntasFAQ.FormPreguntasFAQ_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Evento que se ejecuta cuando el formulario se está cerrando. Muestra el formulario principal si no se está cerrando la aplicación.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormPreguntasFAQ.volverAtrasToolStripMenuItem_Click_1(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando se hace clic en "Volver Atrás". Cierra el formulario de preguntas frecuentes.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormPreguntasFAQ.buttonAyuda_Click_1(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al hacer clic en el botón "Ayuda". Muestra el formulario de ayuda.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormPreguntasFAQ.listBox1_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al seleccionar la primera pregunta en la lista de preguntas frecuentes. Muestra la respuesta en el richTextBox.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormPreguntasFAQ.listBox2_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al seleccionar la segunda pregunta en la lista de preguntas frecuentes. Muestra la respuesta en el richTextBox.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormPreguntasFAQ.listBox4_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al seleccionar la cuarta pregunta en la lista de preguntas frecuentes. Muestra la respuesta en el richTextBox.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormPreguntasFAQ.listBox3_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al seleccionar la tercera pregunta en la lista de preguntas frecuentes. Muestra la respuesta en el richTextBox.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormPreguntasFAQ.listBox5_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al seleccionar la quinta pregunta en la lista de preguntas frecuentes. Muestra la respuesta en el richTextBox.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormPreguntasFAQ.listBox10_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al seleccionar la décima pregunta en la lista de preguntas frecuentes. Muestra la respuesta en el richTextBox.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormPreguntasFAQ.listBox7_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al seleccionar la séptima pregunta en la lista de preguntas frecuentes. Muestra la respuesta en el richTextBox.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormPreguntasFAQ.listBox8_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al seleccionar la octava pregunta en la lista de preguntas frecuentes. Muestra la respuesta en el richTextBox.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormPreguntasFAQ.listBox9_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al seleccionar la novena pregunta en la lista de preguntas frecuentes. Muestra la respuesta en el richTextBox.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormPreguntasFAQ.listBox6_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al seleccionar la sexta pregunta en la lista de preguntas frecuentes. Muestra la respuesta en el richTextBox.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormPreguntasFAQ.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormPreguntasFAQ.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormPreguntasFAQ.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete">
+            <summary>
+            Formulario para actualizar y eliminar objetos (Clientes, Empleados, Productos, Coches).
+            Este formulario gestiona las operaciones de actualización y eliminación de distintos tipos de objetos
+            mediante un sistema de selección, validación de campos y visualización de los datos.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.formPrinciapal">
+            <summary>
+            Formulario principal asociado a este formulario (para navegación entre formularios).
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.clientes">
+            <summary>
+            Lista de clientes que se utilizará para mostrar y gestionar la información de clientes.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.clientesAux">
+            <summary>
+            Lista auxiliar de clientes para realizar búsquedas y filtrados sin modificar la lista original.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.empleados">
+            <summary>
+            Lista de empleados que se utilizará para mostrar y gestionar la información de empleados.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.empleadosAux">
+            <summary>
+            Lista auxiliar de empleados para realizar búsquedas y filtrados sin modificar la lista original.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.productos">
+            <summary>
+            Lista de productos que se utilizará para mostrar y gestionar la información de productos.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.productosAux">
+            <summary>
+            Lista auxiliar de productos para realizar búsquedas y filtrados sin modificar la lista original.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.coches">
+            <summary>
+            Lista de coches que se utilizará para mostrar y gestionar la información de coches.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.cochesAux">
+            <summary>
+            Lista auxiliar de coches para realizar búsquedas y filtrados sin modificar la lista original.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.mostradoObjeto">
+            <summary>
+            Indica si el objeto ha sido mostrado en la interfaz.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.cli">
+            <summary>
+            Cliente seleccionado en el formulario para realizar operaciones de actualización o eliminación.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.emp">
+            <summary>
+            Empleado seleccionado en el formulario para realizar operaciones de actualización o eliminación.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.pro">
+            <summary>
+            Producto seleccionado en el formulario para realizar operaciones de actualización o eliminación.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.coch">
+            <summary>
+            Coche seleccionado en el formulario para realizar operaciones de actualización o eliminación.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.#ctor">
+            <summary>
+            Inicializa el formulario de actualización y eliminación de objetos. Este método configura todos los controles visuales
+            del formulario, como botones, campos de texto, listas desplegables y asigna las listas de objetos para su manipulación. 
+            También habilita los eventos y establece valores predeterminados para los controles del formulario.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.Form2_Load(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando el formulario se carga.
+            Inicializa los controles de la interfaz de usuario, ocultando y deshabilitando varios elementos.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.copiarToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento para copiar el texto del control activo al portapapeles.
+            Dependiendo del tipo de control activo, se copia el texto, fecha o datos de un DataGridView.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.pegarToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento para pegar el contenido del portapapeles en el control activo.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.cortarToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento para cortar el texto seleccionado en el control activo y copiarlo al portapapeles.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.borrarToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento para borrar el texto seleccionado en el control activo.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.cortarToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento para cortar el texto seleccionado en el control activo y copiarlo al portapapeles
+            desde el menu contextual.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.copiarToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento para copiar el texto seleccionado en el control activo y copiarlo al portapapeles
+            desde el menu contextual.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.salirToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento para salir de la aplicación.
+            Se marca la variable para indicar que la aplicación debe cerrarse y luego se cierra.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.volverAtrasToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento para volver al formulario anterior, cerrando este formulario.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.pegarToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento para pegar el contenido del portapapeles en el control activo
+            desde el menu contextual.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.borrarToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento para borrar el texto seleccionado en el control activo.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.cancelarToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento para cancelar la operación de edición de objetos.
+            Se confirma la cancelación y se limpian los objetos y controles
+            desde el menu contextual.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.guardarToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento para guardar los cambios realizados en los objetos.
+            Según el valor de la variable `toDelete`, se eliminan o modifican objetos
+            desde el menu contextual.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.buttonGuardar_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento para guardar los cambios realizados en los objetos.
+            Según el valor de la variable `toDelete`, se eliminan o modifican objetos.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.buttonCancelar_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento para cancelar la edición de objetos.
+            Muestra un mensaje de confirmación antes de limpiar los objetos modificados.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.buttonLimpiar_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento para limpiar los campos del formulario según el tipo de objeto seleccionado.
+            Configura valores predeterminados según el tipo de objeto.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.numericUpDown3_ValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando el valor de un control NumericUpDown cambia.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.buttonAceptar_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que maneja el clic en el botón "Aceptar". Permite modificar, eliminar o consultar objetos como clientes, empleados, productos y coches.
+            </summary>
+            <param name="sender">El objeto que disparó el evento, en este caso el botón "Aceptar".</param>
+            <param name="e">Los argumentos del evento.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.Form2_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Evento que se ejecuta cuando el formulario está a punto de cerrarse.
+            Verifica si hay cambios sin guardar y muestra un mensaje de advertencia.
+            Si el usuario decide salir, se asegura de que el formulario principal se muestre nuevamente.
+            </summary>
+            <param name="sender">El objeto que desencadenó el evento (en este caso, el formulario).</param>
+            <param name="e">Los argumentos del evento que proporcionan información sobre el cierre del formulario.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.radioButtonEmpl_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando cambia el estado del radioButton de tipo "Empleado".
+            Actualiza los controles del formulario según las opciones específicas para empleados.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.radioButtonProduc_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando cambia el estado del radioButton de tipo "Producto".
+            Actualiza los controles del formulario según las opciones específicas para productos.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.radioButtonClie_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando cambia el estado del radioButton de tipo "Cliente".
+            Actualiza los controles del formulario según las opciones específicas para clientes.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.radioButtonCoche_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando cambia el estado del radioButton de tipo "Coche".
+            Actualiza los controles del formulario según las opciones específicas para coches.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.buttonRefrescar_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando se hace clic en el botón "Refrescar".
+            Actualiza la vista de la grilla de acuerdo con el tipo de objeto seleccionado.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.radioButtonModif_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando cambia el estado del radioButton de "Modificar".
+            Habilita los controles para modificar los datos del objeto seleccionado.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.radioButtonElimi_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando cambia el estado del radioButton de "Eliminar".
+            Prepara el formulario para eliminar el objeto seleccionado.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.groupBoxTipoObj_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando el grupo de radio buttons de tipo de objeto recibe el enfoque.
+            Oculta la imagen de información en el formulario.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.radioButtonConsult_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando cambia el estado del radioButton de "Consultar".
+            Prepara el formulario para visualizar los datos del objeto seleccionado.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormUpdateDelete.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir">
+            <summary>
+            Formulario para añadir nuevos objetos (Clientes, Empleados, Productos, Coches).
+            Este formulario gestiona la creación de los distintos tipos de objetos mediante un sistema de selección
+            y validación de campos. Además, permite refrescar y limpiar los datos mostrados en la interfaz.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.formPrinciapal">
+            <summary>
+            Formulario principal asociado a este formulario (para navegación entre formularios).
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.clientes">
+            <summary>
+            Lista para almacenar objetos de tipo Cliente.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.clientesAux">
+            <summary>
+            Lista auxiliar para almacenar temporalmente objetos de tipo Cliente.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.empleados">
+            <summary>
+            Lista para almacenar objetos de tipo Empleado.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.empleadosAux">
+            <summary>
+            Lista auxiliar para almacenar temporalmente objetos de tipo Empleado.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.productos">
+            <summary>
+            Lista para almacenar objetos de tipo Producto.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.productosAux">
+            <summary>
+            Lista auxiliar para almacenar temporalmente objetos de tipo Producto.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.coches">
+            <summary>
+            Lista para almacenar objetos de tipo Coche.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.cochesAux">
+            <summary>
+            Lista auxiliar para almacenar temporalmente objetos de tipo Coche.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.#ctor">
+            <summary>
+            Inicializa el formulario de añadir objetos. Este método se encarga de configurar todos los controles visuales del formulario, 
+            como botones, campos de texto, y listas desplegables. Además, establece las listas de datos necesarias para los controles, 
+            proporcionando los datos iniciales desde el controlador. La configuración incluye la habilitación de eventos, 
+            la asignación de valores predeterminados a los controles, y la preparación del formulario para interactuar con el usuario.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.FormAniadir_Load(System.Object,System.EventArgs)">
+            <summary>
+            Configura la visibilidad de los controles del formulario cuando se carga el formulario.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.copiarToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Copia el texto o valor del control activo al portapapeles.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.pegarToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pega el texto del portapapeles en el control activo (TextBox).
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.cortarToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Corta el texto seleccionado del control activo (TextBox) y lo copia al portapapeles.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.borrarToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Borra el texto seleccionado del control activo (TextBox).
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.salirToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Cierra el formulario actual y vuelve al formulario anterior sin guardar los cambios.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.volverAtrasToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Cierra el formulario actual y vuelve al formulario anterior sin guardar los cambios.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.cortarToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Corta el texto seleccionado del control activo (TextBox) y lo copia al portapapeles, desde el menu contextual.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.copiarToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Copia el texto o valor del control activo al portapapeles, desde el menu contextual.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.pegarToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Pega el texto del portapapeles en el control activo (TextBox), desde el menu contextual.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.borrarToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Borra el texto seleccionado del control activo (TextBox), desde el menu contextual.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.limpiarToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Limpia los campos del formulario y restablece los valores predeterminados de los controles, desde el menu cotextual.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.cancelarToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Cancela la creación de objetos nuevos y borra cualquier dato ingresado, desde el menu contextual.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.buttonGuardar_Click(System.Object,System.EventArgs)">
+            <summary>
+            Guarda los objetos creados en las listas correspondientes y muestra el número de objetos guardados.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.buttonCancelar_Click(System.Object,System.EventArgs)">
+            <summary>
+            Cancela la creación de objetos nuevos y borra cualquier dato ingresado.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.buttonLimpiar_Click(System.Object,System.EventArgs)">
+            <summary>
+            Limpia los campos del formulario y restablece los valores predeterminados de los controles.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.buttonAceptar_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando se hace clic en el botón "Aceptar". 
+            Realiza validaciones y crea un nuevo objeto dependiendo de la selección del tipo de objeto.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.FormAniadir_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Evento que se ejecuta al cerrar el formulario. 
+            Verifica si hay cambios sin guardar y muestra un mensaje de advertencia.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.radioButtonEmpl_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando el estado del radioButton para "Empleado" cambia.
+            </summary>
+            <param name="sender">El objeto que disparó el evento, en este caso el radioButton.</param>
+            <param name="e">Los argumentos del evento.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.radioButtonProduc_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando el estado del radioButton para "Producto" cambia.
+            </summary>
+            <param name="sender">El objeto que disparó el evento, en este caso el radioButton.</param>
+            <param name="e">Los argumentos del evento.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.radioButtonClie_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando el estado del radioButton para "Cliente" cambia.
+            </summary>
+            <param name="sender">El objeto que disparó el evento, en este caso el radioButton.</param>
+            <param name="e">Los argumentos del evento.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.radioButtonCoche_CheckedChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando el estado del radioButton para "Coche" cambia.
+            </summary>
+            <param name="sender">El objeto que disparó el evento, en este caso el radioButton.</param>
+            <param name="e">Los argumentos del evento.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.buttonRefrescar_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al hacer clic en el botón de refrescar.
+            </summary>
+            <param name="sender">El objeto que disparó el evento, en este caso el botón de refrescar.</param>
+            <param name="e">Los argumentos del evento.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.groupBoxTipoObj_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando el grupo de tipo de objeto recibe el foco.
+            </summary>
+            <param name="sender">El objeto que disparó el evento, en este caso el groupBox de tipo de objeto.</param>
+            <param name="e">Los argumentos del evento.</param>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormAniadir.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Vista.FormClienteTabla">
+            <summary>
+            Formulario para tablas de prueba Clientes.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormClienteTabla.formPrincipal">
+            <summary>
+            Variable para almacenar una referencia al formulario principal.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormClienteTabla.clienteList">
+            <summary>
+            Lista estática que contiene los datos de los clientes.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormClienteTabla.#ctor">
+            <summary>
+            Constructor del formulario que inicializa los componentes y carga los datos de clientes desde un archivo JSON.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormClienteTabla.FormClienteTabla_Load(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando el formulario se carga.
+            Aquí se configura el reportViewer para mostrar un informe con los datos de los clientes.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormClienteTabla.FormClienteTabla_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Evento que ocurre cuando el formulario se está cerrando.
+            Aquí se verifica si el formulario principal está abierto y se lo muestra de nuevo.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormClienteTabla.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormClienteTabla.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormClienteTabla.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Vista.FormCochesGrf">
+            <summary>
+            Formulario para graficos de prueba Coches.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormCochesGrf.cochesList">
+            <summary>
+            Lista estática que contiene los datos de los coches.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormCochesGrf.formPrincipal">
+            <summary>
+            Variable para almacenar una referencia al formulario principal.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormCochesGrf.#ctor">
+            <summary>
+            Constructor del formulario que inicializa los componentes y carga los datos de coches desde un archivo JSON.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormCochesGrf.FormCochesGrf_Load(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando el formulario se carga.
+            Aquí se configura el reportViewer para mostrar un informe con los datos de los coches.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormCochesGrf.FormCochesGrf_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Evento que ocurre cuando el formulario se está cerrando.
+            Aquí se verifica si el formulario principal está abierto y se lo muestra de nuevo.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormCochesGrf.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormCochesGrf.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormCochesGrf.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Vista.FormCochesTabla">
+            <summary>
+            Formulario para tablas de prueba Coches.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormCochesTabla.cochesList">
+            <summary>
+            Lista estática que contiene los datos de los coches.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormCochesTabla.formPrincipal">
+            <summary>
+            Variable para almacenar una referencia al formulario principal.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormCochesTabla.#ctor">
+            <summary>
+            Constructor del formulario que inicializa los componentes y carga los datos de coches desde un archivo XML.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormCochesTabla.FormCochesTabla_Load(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando el formulario se carga.
+            Aquí se configura el reportViewer para mostrar un informe con los datos de los coches.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormCochesTabla.FormCochesTabla_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Evento que ocurre cuando el formulario se está cerrando.
+            Aquí se verifica si el formulario principal está abierto y se lo muestra de nuevo.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormCochesTabla.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormCochesTabla.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormCochesTabla.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Vista.FormEmpleadosGrf">
+            <summary>
+            Formulario para graficos de prueba Empleados.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormEmpleadosGrf.empleadosList">
+            <summary>
+            Lista estática que contiene los datos de los empleados.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormEmpleadosGrf.formPrincipal">
+            <summary>
+            Variable para almacenar una referencia al formulario principal.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormEmpleadosGrf.#ctor">
+            <summary>
+            Constructor del formulario que inicializa los componentes y carga los datos de empleados desde un archivo JSON.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormEmpleadosGrf.FormEmpleadosGrf_Load(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando el formulario se carga.
+            Aquí se configura el reportViewer para mostrar un informe con los datos de los empleados.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormEmpleadosGrf.FormEmpleadosGrf_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Evento que ocurre cuando el formulario se está cerrando.
+            Aquí se verifica si el formulario principal está abierto y se lo muestra de nuevo.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormEmpleadosGrf.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormEmpleadosGrf.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormEmpleadosGrf.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Vista.FormEmpleadosTabla">
+            <summary>
+            Formulario para tablas de prueba Empleados.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormEmpleadosTabla.empleadosList">
+            <summary>
+            Lista estática que contiene los datos de los empleados.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormEmpleadosTabla.formPrincipal">
+            <summary>
+            Variable para almacenar una referencia al formulario principal.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormEmpleadosTabla.#ctor">
+            <summary>
+            Constructor del formulario que inicializa los componentes y carga los datos de empleados desde un archivo XML.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormEmpleadosTabla.FormEmpleadosTabla_Load(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando el formulario se carga.
+            Aquí se configura el reportViewer para mostrar un informe con los datos de los empleados.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormEmpleadosTabla.FormEmpleadosTabla_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Evento que ocurre cuando el formulario se está cerrando.
+            Aquí se verifica si el formulario principal está abierto y se lo muestra de nuevo.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormEmpleadosTabla.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormEmpleadosTabla.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormEmpleadosTabla.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport">
+            <summary>
+            Formulario para la importación y exportación de datos de diferentes entidades (Clientes, Empleados, Productos, Coches).
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.productosList">
+            <summary>
+            Lista de productos actual, utilizada para almacenar los productos cargados en la aplicación.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.clientesList">
+            <summary>
+            Lista de clientes actual, utilizada para almacenar los clientes cargados en la aplicación.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.empleadosList">
+            <summary>
+            Lista de empleados actual, utilizada para almacenar los empleados cargados en la aplicación.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.productosListLeido">
+            <summary>
+            Lista auxiliar de productos leídos desde un archivo, utilizada para almacenar productos
+            cargados de un archivo JSON o XML.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.clientesListLeido">
+            <summary>
+            Lista auxiliar de clientes leídos desde un archivo, utilizada para almacenar clientes
+            cargados de un archivo JSON o XML.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.empleadosListLeido">
+            <summary>
+            Lista auxiliar de empleados leídos desde un archivo, utilizada para almacenar empleados
+            cargados de un archivo JSON o XML.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.cochesList">
+            <summary>
+            Lista de coches actual, utilizada para almacenar los coches cargados en la aplicación.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.cochesListLeido">
+            <summary>
+            Lista auxiliar de coches leídos desde un archivo, utilizada para almacenar coches
+            cargados de un archivo JSON o XML.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.formPrinciapal">
+            <summary>
+            Instancia del formulario principal, que puede ser utilizada para realizar acciones entre formularios.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.#ctor">
+            <summary>
+            Constructor del formulario de importación y exportación de datos. 
+            Este constructor inicializa la interfaz de usuario del formulario y configura varios aspectos visuales,
+            incluyendo la ubicación de la ventana en la pantalla. Además, se encarga de configurar las herramientas de ayuda 
+            (ToolTips) para cada botón en el formulario, proporcionando información adicional sobre la función de cada botón 
+            cuando el usuario pasa el cursor sobre ellos. Los botones permiten cargar y grabar datos de diferentes entidades 
+            (clientes, empleados, productos, coches) en archivos de formato JSON y XML.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.button2_Click_1(System.Object,System.EventArgs)">
+            <summary>
+            Refresca los datos de acuerdo al tipo seleccionado en el ComboBox tipoToolStripMenuItem.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.volverAtrasToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Cierra el formulario y controla la salida de la aplicación.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.salirToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Cierra la aplicación completamente.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.copiarToolStripMenuItem1_Click_1(System.Object,System.EventArgs)">
+            <summary>
+            Copia el texto seleccionado en un control TextBox o las celdas seleccionadas en el DataGridView al portapapeles.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.tipoToolStripMenuItem_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Maneja el cambio de selección del ComboBox tipoToolStripMenuItem, refrescando la vista del DataGridView según el tipo seleccionado.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.FormBuscar_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Se ejecuta al cerrar el formulario y gestiona el comportamiento del cierre, mostrando el formulario principal si es necesario.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.button4_Click(System.Object,System.EventArgs)">
+            <summary>
+            Carga los datos de Clientes desde un archivo Json.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.button5_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al hacer clic en el botón de grabar datos de Clientes en un archivo Json.
+            Se muestra un mensaje de confirmación y, si se acepta, se guarda la lista de clientes en un archivo Json.
+            </summary>
+            <param name="sender">El control que dispara el evento (el botón).</param>
+            <param name="e">Argumentos del evento del clic.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.button1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al hacer clic en el botón de grabar datos de Clientes en un archivo XML.
+            Se muestra un mensaje de confirmación y, si se acepta, se guarda la lista de clientes en un archivo XML.
+            </summary>
+            <param name="sender">El control que dispara el evento (el botón).</param>
+            <param name="e">Argumentos del evento del clic.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.button3_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al hacer clic en el botón de cargar datos de Clientes desde un archivo XML.
+            Se muestra un mensaje de confirmación y, si se acepta, se carga la lista de clientes desde un archivo XML.
+            </summary>
+            <param name="sender">El control que dispara el evento (el botón).</param>
+            <param name="e">Argumentos del evento del clic.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.button6_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al hacer clic en el botón de cargar datos de Empleados desde un archivo Json.
+            Se muestra un mensaje de confirmación y, si se acepta, se carga la lista de empleados desde un archivo Json.
+            </summary>
+            <param name="sender">El control que dispara el evento (el botón).</param>
+            <param name="e">Argumentos del evento del clic.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.button7_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al hacer clic en el botón de grabar datos de Empleados en un archivo Json.
+            Se muestra un mensaje de confirmación y, si se acepta, se guarda la lista de empleados en un archivo Json.
+            </summary>
+            <param name="sender">El control que dispara el evento (el botón).</param>
+            <param name="e">Argumentos del evento del clic.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.button8_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al hacer clic en el botón de cargar datos de Empleados desde un archivo XML.
+            Se muestra un mensaje de confirmación y, si se acepta, se carga la lista de empleados desde un archivo XML.
+            </summary>
+            <param name="sender">El control que dispara el evento (el botón).</param>
+            <param name="e">Argumentos del evento del clic.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.button9_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al hacer clic en el botón de grabar datos de Empleados en un archivo XML.
+            Se muestra un mensaje de confirmación y, si se acepta, se guarda la lista de empleados en un archivo XML.
+            </summary>
+            <param name="sender">El control que dispara el evento (el botón).</param>
+            <param name="e">Argumentos del evento del clic.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.button13_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al hacer clic en el botón de grabar datos de Productos en un archivo Json.
+            Se muestra un mensaje de confirmación y, si se acepta, se guarda la lista de productos en un archivo Json.
+            </summary>
+            <param name="sender">El control que dispara el evento (el botón).</param>
+            <param name="e">Argumentos del evento del clic.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.button12_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al hacer clic en el botón de cargar datos de Productos desde un archivo Json.
+            Se muestra un mensaje de confirmación y, si se acepta, se carga la lista de productos desde un archivo Json.
+            </summary>
+            <param name="sender">El control que dispara el evento (el botón).</param>
+            <param name="e">Argumentos del evento del clic.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.button10_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al hacer clic en el botón de cargar datos de Productos desde un archivo XML.
+            Se muestra un mensaje de confirmación y, si se acepta, se carga la lista de productos desde un archivo XML.
+            </summary>
+            <param name="sender">El control que dispara el evento (el botón).</param>
+            <param name="e">Argumentos del evento del clic.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.button11_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al hacer clic en el botón de grabar datos de Productos en un archivo XML.
+            Se muestra un mensaje de confirmación y, si se acepta, se guarda la lista de productos en un archivo XML.
+            </summary>
+            <param name="sender">El control que dispara el evento (el botón).</param>
+            <param name="e">Argumentos del evento del clic.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.button14_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al hacer clic en el botón de cargar datos de Coches desde un archivo XML.
+            Se muestra un mensaje de confirmación y, si se acepta, se carga la lista de coches desde un archivo XML.
+            </summary>
+            <param name="sender">El control que dispara el evento (el botón).</param>
+            <param name="e">Argumentos del evento del clic.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.button15_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al hacer clic en el botón de grabar datos de Coches en un archivo XML.
+            Se muestra un mensaje de confirmación y, si se acepta, se guarda la lista de coches en un archivo XML.
+            </summary>
+            <param name="sender">El control que dispara el evento (el botón).</param>
+            <param name="e">Argumentos del evento del clic.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.button16_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al hacer clic en el botón de cargar datos de Coches desde un archivo Json.
+            Se muestra un mensaje de confirmación y, si se acepta, se carga la lista de coches desde un archivo Json.
+            </summary>
+            <param name="sender">El control que dispara el evento (el botón).</param>
+            <param name="e">Argumentos del evento del clic.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.button17_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta al hacer clic en el botón de grabar datos de Coches en un archivo Json.
+            Se muestra un mensaje de confirmación y, si se acepta, se guarda la lista de coches en un archivo Json.
+            </summary>
+            <param name="sender">El control que dispara el evento (el botón).</param>
+            <param name="e">Argumentos del evento del clic.</param>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormImportExport.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Vista.FormClientesGrf">
+            <summary>
+            Formulario para graficos de prueba Clientes.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormClientesGrf.formPrincipal">
+            <summary>
+            Variable para almacenar una referencia al formulario principal.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormClientesGrf.clienteList">
+            <summary>
+            Lista estática que contiene los datos de los clientes.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormClientesGrf.#ctor">
+            <summary>
+            Constructor del formulario que inicializa los componentes y carga los datos de clientes desde un archivo XML.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormClientesGrf.FormClientesInformeGrf_Load(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando el formulario se carga.
+            Aquí se configura el reportViewer para mostrar un informe con los datos de los clientes.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormClientesGrf.FormClientesInformeGrf_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Evento que ocurre cuando el formulario se está cerrando.
+            Aquí se verifica si el formulario principal está abierto y se lo muestra de nuevo.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormClientesGrf.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormClientesGrf.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormClientesGrf.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Vista.FormProductosGrf">
+            <summary>
+            Formulario para graficos de prueba Productos.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormProductosGrf.productosList">
+            <summary>
+            Lista estática que contiene los datos de los productos.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormProductosGrf.formPrincipal">
+            <summary>
+            Variable para almacenar una referencia al formulario principal.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormProductosGrf.#ctor">
+            <summary>
+            Constructor del formulario que inicializa los componentes y carga los datos de prodcutos desde un archivo JSON.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormProductosGrf.FormProductosGrf_Load(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando el formulario se carga.
+            Aquí se configura el reportViewer para mostrar un informe con los datos de los productos.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormProductosGrf.FormProductosGrf_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Evento que ocurre cuando el formulario se está cerrando.
+            Aquí se verifica si el formulario principal está abierto y se lo muestra de nuevo.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormProductosGrf.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormProductosGrf.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormProductosGrf.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Vista.FormProductosTabla">
+            <summary>
+            Formulario para tablas de prueba Productos.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormProductosTabla.productosList">
+            <summary>
+            Lista estática que contiene los datos de los productos.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormProductosTabla.formPrincipal">
+            <summary>
+            Variable para almacenar una referencia al formulario principal.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormProductosTabla.#ctor">
+            <summary>
+            Constructor del formulario que inicializa los componentes y carga los datos de prodcutos desde un archivo XML.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormProductosTabla.FormProductosTabla_Load(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando el formulario se carga.
+            Aquí se configura el reportViewer para mostrar un informe con los datos de los productos.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormProductosTabla.FormProductosTabla_FormClosing(System.Object,System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Evento que ocurre cuando el formulario se está cerrando.
+            Aquí se verifica si el formulario principal está abierto y se lo muestra de nuevo.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.Vista.FormProductosTabla.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormProductosTabla.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Vista.FormProductosTabla.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.FormPrincipal">
+            <summary>
+            Clase principal del formulario. Hereda de la clase base <see cref="T:System.Windows.Forms.Form"/> y contiene la lógica para la interfaz principal de la aplicación.
+            </summary>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.FormPrincipal.formAniadir">
+            <summary>
+            Instancia del formulario de añadir elementos. Se utilizará para abrir una ventana de creación de nuevos objetos.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.FormPrincipal.#ctor">
+            <summary>
+            Inicializa el formulario principal de la aplicación, centra la ventana en pantalla
+            y configura las descripciones emergentes (tooltips) para los botones principales.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.FormPrincipal.button2_Click(System.Object,System.EventArgs)">
+            <summary>
+            Abre el formulario de Importación/Exportación y oculta el formulario principal.
+            </summary>
+            <param name="sender">El botón que desencadenó este evento.</param>
+            <param name="e">Argumentos del evento del botón.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.FormPrincipal.button1_Click_1(System.Object,System.EventArgs)">
+            <summary>
+            Abre el formulario para añadir nuevos registros y oculta el formulario principal.
+            </summary>
+            <param name="sender">El botón que desencadenó este evento.</param>
+            <param name="e">Argumentos del evento del botón.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.FormPrincipal.tablasToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Abre el formulario con la tabla de clientes y oculta el formulario principal.
+            </summary>
+            <param name="sender">El elemento del menú que desencadenó este evento.</param>
+            <param name="e">Argumentos del evento del menú.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.FormPrincipal.salirToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Cierra la aplicación cuando el usuario selecciona la opción "Salir" del menú.
+            </summary>
+            <param name="sender">El elemento del menú que desencadenó este evento.</param>
+            <param name="e">Argumentos del evento del menú.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.FormPrincipal.button3_Click(System.Object,System.EventArgs)">
+            <summary>
+            Abre el formulario de actualización y eliminación cuando el usuario hace clic en el botón correspondiente.
+            </summary>
+            <param name="sender">El botón que desencadenó este evento.</param>
+            <param name="e">Argumentos del evento del botón.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.FormPrincipal.gráficosToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Abre el formulario de gráficos para empleados cuando el usuario selecciona la opción correspondiente del menú.
+            </summary>
+            <param name="sender">El elemento del menú que desencadenó este evento.</param>
+            <param name="e">Argumentos del evento del menú.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.FormPrincipal.gráficosToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Abre el formulario de gráficos para clientes cuando el usuario selecciona la opción correspondiente del menú.
+            </summary>
+            <param name="sender">El elemento del menú que desencadenó este evento.</param>
+            <param name="e">Argumentos del evento del menú.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.FormPrincipal.tablasToolStripMenuItem1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Abre el formulario de tablas para empleados cuando el usuario selecciona la opción correspondiente del menú.
+            </summary>
+            <param name="sender">El elemento del menú que desencadenó este evento.</param>
+            <param name="e">Argumentos del evento del menú.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.FormPrincipal.tablasToolStripMenuItem2_Click(System.Object,System.EventArgs)">
+            <summary>
+            Abre el formulario de tablas para productos cuando el usuario selecciona la opción correspondiente del menú.
+            </summary>
+            <param name="sender">El elemento del menú que desencadenó este evento.</param>
+            <param name="e">Argumentos del evento del menú.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.FormPrincipal.gráficosToolStripMenuItem2_Click(System.Object,System.EventArgs)">
+            <summary>
+            Abre el formulario de gráficos para productos cuando el usuario selecciona la opción correspondiente del menú.
+            </summary>
+            <param name="sender">El elemento del menú que desencadenó este evento.</param>
+            <param name="e">Argumentos del evento del menú.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.FormPrincipal.tablasToolStripMenuItem3_Click(System.Object,System.EventArgs)">
+            <summary>
+            Abre el formulario de tablas para coches cuando el usuario selecciona la opción correspondiente del menú.
+            </summary>
+            <param name="sender">El elemento del menú que desencadenó este evento.</param>
+            <param name="e">Argumentos del evento del menú.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.FormPrincipal.graficosToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Abre el formulario de gráficos para coches cuando el usuario selecciona la opción correspondiente del menú.
+            </summary>
+            <param name="sender">El elemento del menú que desencadenó este evento.</param>
+            <param name="e">Argumentos del evento del menú.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.FormPrincipal.ayudaDeUsuarioToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Abre el formulario de ayuda de la aplicacion.
+            </summary>
+            <param name="sender">El elemento del menú que desencadenó este evento.</param>
+            <param name="e">Argumentos del evento del menú.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.FormPrincipal.FormPrincipal_Activated(System.Object,System.EventArgs)">
+            <summary>
+            Evento que se ejecuta cuando el formulario principal se activa. Verifica si es necesario abrir las pantallas de Preguntas Frecuentes o Ayuda.
+            </summary>
+            <param name="sender">El formulario que ha sido activado.</param>
+            <param name="e">Argumentos del evento de activación.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.FormPrincipal.preguntasFrecuentesFAQToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Abre el formulario de Preguntas Frecuentes cuando el usuario selecciona la opción correspondiente del menú.
+            </summary>
+            <param name="sender">El elemento del menú que desencadenó este evento.</param>
+            <param name="e">Argumentos del evento del menú.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.FormPrincipal.acercaDeToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Abre el formulario "Acerca de" cuando el usuario selecciona la opción correspondiente del menú.
+            </summary>
+            <param name="sender">El elemento del menú que desencadenó este evento.</param>
+            <param name="e">Argumentos del evento del menú.</param>
+        </member>
+        <member name="F:di_ra5_proyecto_Cesar_Aganzo.FormPrincipal.components">
+            <summary>
+            Variable del diseñador necesaria.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.FormPrincipal.Dispose(System.Boolean)">
+            <summary>
+            Limpiar los recursos que se estén usando.
+            </summary>
+            <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.FormPrincipal.InitializeComponent">
+            <summary>
+            Método necesario para admitir el Diseñador. No se puede modificar
+            el contenido de este método con el editor de código.
+            </summary>
+        </member>
+        <member name="M:di_ra5_proyecto_Cesar_Aganzo.Program.Main">
+            <summary>
+            Punto de entrada principal para la aplicación.
+            </summary>
+        </member>
+        <member name="T:di_ra5_proyecto_Cesar_Aganzo.Properties.Resources">
+            <summary>
+              Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Properties.Resources.ResourceManager">
+            <summary>
+              Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Properties.Resources.Culture">
+            <summary>
+              Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+              búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Properties.Resources.cancel_24dp_EA3323_FILL0_wght400_GRAD0_opsz24">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Properties.Resources.close_24dp_000000_FILL0_wght400_GRAD0_opsz24">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Properties.Resources.content_copy_24dp_000000_FILL0_wght400_GRAD0_opsz24">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Properties.Resources.content_cut_24dp_000000_FILL0_wght400_GRAD0_opsz24">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Properties.Resources.content_paste_go_16dp_000000_FILL0_wght400_GRAD0_opsz20">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Properties.Resources.delete_16dp_000000_FILL0_wght400_GRAD0_opsz20">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Properties.Resources.flecha">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Properties.Resources.mop_24dp_0000F5_FILL0_wght400_GRAD0_opsz24">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Properties.Resources.play_arrow_16dp_000000_FILL0_wght400_GRAD0_opsz20">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Properties.Resources.refresh">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Properties.Resources.save_24dp_0000F5_FILL0_wght400_GRAD0_opsz24">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:di_ra5_proyecto_Cesar_Aganzo.Properties.Resources.undo_24dp_000000_FILL0_wght400_GRAD0_opsz24">
+            <summary>
+              Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:SqlServerTypes.Utilities">
+            <summary>
+            Utility methods related to CLR Types for SQL Server 
+            </summary>
+        </member>
+        <member name="M:SqlServerTypes.Utilities.LoadNativeAssemblies(System.String)">
+            <summary>
+            Loads the required native assemblies for the current architecture (x86 or x64)
+            </summary>
+            <param name="rootApplicationPath">
+            Root path of the current application. Use Server.MapPath(".") for ASP.NET applications
+            and AppDomain.CurrentDomain.BaseDirectory for desktop applications.
+            </param>
+        </member>
+    </members>
+</doc>

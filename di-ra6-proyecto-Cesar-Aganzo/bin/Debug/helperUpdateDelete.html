@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda - Actualización y Eliminación de Objetos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1 {
+            color: #2d7f32;
+            border-bottom: 2px solid #2d7f32;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #4caf50;
+        }
+
+        p, ul {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            color: #2d7f32;
+            font-weight: bold;
+        }
+
+        .note {
+            background-color: #dff0d8;
+            padding: 10px;
+            border-left: 5px solid #2d7f32;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ayuda - Actualización y Eliminación de Objetos</h1>
+    <p>Este formulario te permite modificar, eliminar o consultar objetos existentes en el sistema, como clientes, coches, empleados y productos. A continuación, se describen los controles disponibles con sus respectivos tooltips.</p>
+
+    <h2>Botones Principales</h2>
+    <ul>
+        <li><span class="highlight">Refrescar Lista</span>: Botón para refrescar la lista de objetos. <span title="Refresca la lista de objetos">[tooltip]</span></li>
+        <li><span class="highlight">Aceptar</span>: Botón para ver un objeto en detalle. <span title="Muestra un objeto para visualizar">[tooltip]</span></li>
+        <li><span class="highlight">Cancelar</span>: Botón para cancelar la modificación o eliminación de objetos. <span title="Cancela la operación y cierra el formulario">[tooltip]</span></li>
+        <li><span class="highlight">Guardar</span>: Botón para guardar la modificación o eliminación de un objeto. <span title="Guarda los cambios o elimina el objeto">[tooltip]</span></li>
+    </ul>
+
+    <h2>Selección de Tipo de Objeto</h2>
+    <ul>
+        <li><span class="highlight">Selector Cliente</span>: Radio button para seleccionar el tipo de objeto cliente. <span title="Selecciona un cliente">[tooltip]</span></li>
+        <li><span class="highlight">Selector Coche</span>: Radio button para seleccionar el tipo de objeto coche. <span title="Selecciona un coche">[tooltip]</span></li>
+        <li><span class="highlight">Selector Empleado</span>: Radio button para seleccionar el tipo de objeto empleado. <span title="Selecciona un empleado">[tooltip]</span></li>
+        <li><span class="highlight">Selector Producto</span>: Radio button para seleccionar el tipo de objeto producto. <span title="Selecciona un producto">[tooltip]</span></li>
+    </ul>
+
+    <h2>Acciones de Modificación y Eliminación</h2>
+    <ul>
+        <li><span class="highlight">Eliminar por 'ID'</span>: Radio button para eliminar un objeto por su identificador único. <span title="Elimina un objeto según su ID">[tooltip]</span></li>
+        <li><span class="highlight">Modificar por 'ID'</span>: Radio button para modificar un objeto por su identificador único. <span title="Modifica un objeto según su ID">[tooltip]</span></li>
+        <li><span class="highlight">Consultar por 'ID'</span>: Radio button para consultar un objeto por su identificador único. <span title="Consulta un objeto según su ID">[tooltip]</span></li>
+    </ul>
+
+    <h2>Controles Adicionales</h2>
+    <ul>
+        <li><span class="highlight">Campo Nombre o Marca</span>: Campos de texto para introducir información adicional, siempre seleccionando previamente el tipo de objeto.</li>
+        <li><span class="highlight">Campo Apellido o Correo o Modelo</span>: Campos de texto para introducir información adicional, siempre seleccionando previamente el tipo de objeto.</li>
+        <li><span class="highlight">Campo descripcion</span>: Campo para ingresar una descripción detallada del objeto (por ejemplo, producto).</li>
+        <li><span class="highlight">Selector (VIP / Descapotable / Jornada reducida)</span>: Marca esta casilla para activar características especiales, como VIP , descapotable o jornada reducida.</li>
+        <li><span class="highlight">Campo para fecha</span>: Permite seleccionar una fecha. El campo es relevante según el tipo de objeto seleccionado.</li>
+        <li><span class="highlight">Campo numéricos (Sueldo / Precio / Descuento)</span>: Permite ingresar valores numéricos para sueldo (empleado), precio (coche, producto) o descuento (producto).</li>
+        <li><span class="highlight">Selector de categoría</span>: Selecciona la categoría del empleado (por ejemplo, gerente, técnico).</li>
+        <li><span class="highlight">Tooltips</span>: Cada campo tiene una descripción emergente (tooltip) para ayudarte a completar los campos correctamente.</li>
+    </ul>
+
+    <div class="note">
+        <p>Recuerda que antes de modificar, eliminar o consultar un objeto, debes seleccionar el tipo de objeto correspondiente (cliente, coche, empleado o producto) y proporcionar el identificador adecuado.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - Ayuda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1 {
+            color: #2d7f32;
+            border-bottom: 2px solid #2d7f32;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #4caf50;
+        }
+
+        p, ul {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            color: #2d7f32;
+            font-weight: bold;
+        }
+
+        .note {
+            background-color: #dff0d8;
+            padding: 10px;
+            border-left: 5px solid #2d7f32;
+        }
+
+        .faq-item {
+            cursor: pointer;
+            padding: 8px;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            margin-bottom: 8px;
+            border-radius: 5px;
+        }
+
+            .faq-item:hover {
+                background-color: #e8e8e8;
+            }
+
+        .response {
+            display: none;
+            margin-top: 10px;
+            background-color: #e7f3e7;
+            padding: 10px;
+            border-left: 4px solid #2d7f32;
+        }
+    </style>
+</head>
+<body>
+    <h1>Preguntas Frecuentes - Ayuda</h1>
+    <p>Seleccione una pregunta para ver la respuesta.</p>
+
+    <div class="faq-item" onclick="toggleResponse(1)">
+        <p class="highlight">¿Cómo cerrar la aplicación?</p>
+    </div>
+    <div class="response" id="response1">
+        <p>Puedes cerrar la aplicación desde la 'X' de la esquina superior derecha. También puedes cerrarla desde los menús superiores o pulsando 'Ctrl + Q'.</p>
+    </div>
+
+    <div class="faq-item" onclick="toggleResponse(2)">
+        <p class="highlight">¿Cómo insertar objetos?</p>
+    </div>
+    <div class="response" id="response2">
+        <p>Puedes insertar objetos pulsando sobre el botón 'Insertar Objeto' en el menú principal.</p>
+    </div>
+
+    <div class="faq-item" onclick="toggleResponse(3)">
+        <p class="highlight">¿Cómo consultar objetos?</p>
+    </div>
+    <div class="response" id="response3">
+        <p>Puedes consultar objetos por ID pulsando sobre el botón 'Consultar / Modificar / Eliminar' en el menú principal.</p>
+    </div>
+
+    <div class="faq-item" onclick="toggleResponse(4)">
+        <p class="highlight">¿Cómo modificar objetos?</p>
+    </div>
+    <div class="response" id="response4">
+        <p>Puedes modificar objetos por ID pulsando sobre el botón 'Consultar / Modificar / Eliminar' en el menú principal.</p>
+    </div>
+
+    <div class="faq-item" onclick="toggleResponse(5)">
+        <p class="highlight">¿Cómo eliminar objetos?</p>
+    </div>
+    <div class="response" id="response5">
+        <p>Puedes eliminar objetos pulsando sobre el botón 'Consultar / Modificar / Eliminar' en el menú principal.</p>
+    </div>
+
+    <div class="faq-item" onclick="toggleResponse(6)">
+        <p class="highlight">¿Cómo importar objetos?</p>
+    </div>
+    <div class="response" id="response6">
+        <p>Puedes importar objetos desde un archivo JSON o XML pulsando sobre el botón 'Exportar / Importar' en el menú principal.</p>
+    </div>
+
+    <div class="faq-item" onclick="toggleResponse(7)">
+        <p class="highlight">¿Cómo exportar objetos?</p>
+    </div>
+    <div class="response" id="response7">
+        <p>Puedes exportar objetos pulsando sobre el botón 'Exportar / Importar' en el menú principal.</p>
+    </div>
+
+    <div class="faq-item" onclick="toggleResponse(8)">
+        <p class="highlight">¿Cómo eliminar varios objetos?</p>
+    </div>
+    <div class="response" id="response8">
+        <p>Puedes eliminar varios objetos a la vez pulsando sobre el botón 'Consultar / Modificar / Eliminar' en el menú principal.</p>
+    </div>
+
+    <div class="faq-item" onclick="toggleResponse(9)">
+        <p class="highlight">¿Cómo modificar varios objetos?</p>
+    </div>
+    <div class="response" id="response9">
+        <p>Puedes modificar varios objetos a la vez pulsando sobre el botón 'Consultar / Modificar / Eliminar' en el menú principal.</p>
+    </div>
+
+    <div class="faq-item" onclick="toggleResponse(10)">
+        <p class="highlight">¿Cómo consultar varios objetos por ID?</p>
+    </div>
+    <div class="response" id="response10">
+        <p>Puedes consultar varios objetos por ID pulsando sobre el botón 'Consultar / Modificar / Eliminar' en el menú principal.</p>
+    </div>
+
+    <script>
+        function toggleResponse(id) {
+            const response = document.getElementById('response' + id);
+            response.style.display = response.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

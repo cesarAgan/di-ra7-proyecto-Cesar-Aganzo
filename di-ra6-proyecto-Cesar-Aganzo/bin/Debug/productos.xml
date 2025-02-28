@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfProducto>
+  <Producto>
+    <Id>1</Id>
+    <Name>Pan</Name>
+    <Description>Pan del día</Description>
+    <Precio>1</Precio>
+    <FechaCaduca>2025-01-31T00:59:26.7973165+01:00</FechaCaduca>
+    <Descuento>30</Descuento>
+  </Producto>
+  <Producto>
+    <Id>2</Id>
+    <Name>Zanahoria</Name>
+    <Description>Zanahoria fresca</Description>
+    <Precio>0.2</Precio>
+    <FechaCaduca>2025-02-06T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>10</Descuento>
+  </Producto>
+  <Producto>
+    <Id>3</Id>
+    <Name>Tomate</Name>
+    <Description>Tomate rojo</Description>
+    <Precio>0.5</Precio>
+    <FechaCaduca>2025-02-06T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>0</Descuento>
+  </Producto>
+  <Producto>
+    <Id>4</Id>
+    <Name>Pollo</Name>
+    <Description>Pollo entero</Description>
+    <Precio>4</Precio>
+    <FechaCaduca>2025-02-04T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>15</Descuento>
+  </Producto>
+  <Producto>
+    <Id>5</Id>
+    <Name>Hamburguesa</Name>
+    <Description>Hamburguesas gourmet</Description>
+    <Precio>2.5</Precio>
+    <FechaCaduca>2025-02-09T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>20</Descuento>
+  </Producto>
+  <Producto>
+    <Id>6</Id>
+    <Name>Salchichas</Name>
+    <Description>Salchichas tradicionales</Description>
+    <Precio>1.2</Precio>
+    <FechaCaduca>2025-02-11T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>5</Descuento>
+  </Producto>
+  <Producto>
+    <Id>7</Id>
+    <Name>Lechuga</Name>
+    <Description>Lechuga fresca</Description>
+    <Precio>0.9</Precio>
+    <FechaCaduca>2025-02-02T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>0</Descuento>
+  </Producto>
+  <Producto>
+    <Id>8</Id>
+    <Name>Manzana</Name>
+    <Description>Manzanas dulces</Description>
+    <Precio>1.5</Precio>
+    <FechaCaduca>2025-02-13T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>10</Descuento>
+  </Producto>
+  <Producto>
+    <Id>9</Id>
+    <Name>Yogur</Name>
+    <Description>Yogur natural</Description>
+    <Precio>0.8</Precio>
+    <FechaCaduca>2025-02-05T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>0</Descuento>
+  </Producto>
+  <Producto>
+    <Id>10</Id>
+    <Name>Queso</Name>
+    <Description>Queso manchego</Description>
+    <Precio>3.5</Precio>
+    <FechaCaduca>2025-02-19T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>5</Descuento>
+  </Producto>
+  <Producto>
+    <Id>11</Id>
+    <Name>Cerveza</Name>
+    <Description>Cerveza rubia</Description>
+    <Precio>1.1</Precio>
+    <FechaCaduca>2025-03-01T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>15</Descuento>
+  </Producto>
+  <Producto>
+    <Id>12</Id>
+    <Name>Agua</Name>
+    <Description>Agua mineral</Description>
+    <Precio>0.6</Precio>
+    <FechaCaduca>2025-03-31T00:59:26.8066164+02:00</FechaCaduca>
+    <Descuento>0</Descuento>
+  </Producto>
+  <Producto>
+    <Id>13</Id>
+    <Name>Harina</Name>
+    <Description>Harina de trigo</Description>
+    <Precio>0.9</Precio>
+    <FechaCaduca>2026-01-30T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>0</Descuento>
+  </Producto>
+  <Producto>
+    <Id>14</Id>
+    <Name>Azúcar</Name>
+    <Description>Azúcar refinado</Description>
+    <Precio>0.75</Precio>
+    <FechaCaduca>2025-07-29T00:59:26.8066164+02:00</FechaCaduca>
+    <Descuento>10</Descuento>
+  </Producto>
+  <Producto>
+    <Id>15</Id>
+    <Name>Arroz</Name>
+    <Description>Arroz integral</Description>
+    <Precio>1.2</Precio>
+    <FechaCaduca>2025-08-18T00:59:26.8066164+02:00</FechaCaduca>
+    <Descuento>0</Descuento>
+  </Producto>
+  <Producto>
+    <Id>16</Id>
+    <Name>Pasta</Name>
+    <Description>Pasta italiana</Description>
+    <Precio>1.3</Precio>
+    <FechaCaduca>2025-10-07T00:59:26.8066164+02:00</FechaCaduca>
+    <Descuento>0</Descuento>
+  </Producto>
+  <Producto>
+    <Id>17</Id>
+    <Name>Aceite</Name>
+    <Description>Aceite de oliva</Description>
+    <Precio>4.2</Precio>
+    <FechaCaduca>2025-07-29T00:59:26.8066164+02:00</FechaCaduca>
+    <Descuento>5</Descuento>
+  </Producto>
+  <Producto>
+    <Id>18</Id>
+    <Name>Huevos</Name>
+    <Description>Huevos frescos</Description>
+    <Precio>2.5</Precio>
+    <FechaCaduca>2025-02-14T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>0</Descuento>
+  </Producto>
+  <Producto>
+    <Id>19</Id>
+    <Name>Leche</Name>
+    <Description>Leche entera</Description>
+    <Precio>1.1</Precio>
+    <FechaCaduca>2025-02-09T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>0</Descuento>
+  </Producto>
+  <Producto>
+    <Id>20</Id>
+    <Name>Pescado</Name>
+    <Description>Pescado fresco</Description>
+    <Precio>6.5</Precio>
+    <FechaCaduca>2025-02-01T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>10</Descuento>
+  </Producto>
+  <Producto>
+    <Id>21</Id>
+    <Name>Mantequilla</Name>
+    <Description>Mantequilla cremosa</Description>
+    <Precio>1.8</Precio>
+    <FechaCaduca>2025-03-01T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>0</Descuento>
+  </Producto>
+  <Producto>
+    <Id>22</Id>
+    <Name>Café</Name>
+    <Description>Café molido</Description>
+    <Precio>3</Precio>
+    <FechaCaduca>2025-07-29T00:59:26.8066164+02:00</FechaCaduca>
+    <Descuento>20</Descuento>
+  </Producto>
+  <Producto>
+    <Id>23</Id>
+    <Name>Té</Name>
+    <Description>Té verde</Description>
+    <Precio>2.2</Precio>
+    <FechaCaduca>2025-11-26T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>15</Descuento>
+  </Producto>
+  <Producto>
+    <Id>24</Id>
+    <Name>Cereal</Name>
+    <Description>Cereal integral</Description>
+    <Precio>2.5</Precio>
+    <FechaCaduca>2025-05-10T00:59:26.8066164+02:00</FechaCaduca>
+    <Descuento>0</Descuento>
+  </Producto>
+  <Producto>
+    <Id>25</Id>
+    <Name>Chocolate</Name>
+    <Description>Chocolate negro</Description>
+    <Precio>2.8</Precio>
+    <FechaCaduca>2025-08-18T00:59:26.8066164+02:00</FechaCaduca>
+    <Descuento>10</Descuento>
+  </Producto>
+  <Producto>
+    <Id>26</Id>
+    <Name>Galletas</Name>
+    <Description>Galletas dulces</Description>
+    <Precio>1.9</Precio>
+    <FechaCaduca>2025-05-30T00:59:26.8066164+02:00</FechaCaduca>
+    <Descuento>5</Descuento>
+  </Producto>
+  <Producto>
+    <Id>27</Id>
+    <Name>Mermelada</Name>
+    <Description>Mermelada de fresa</Description>
+    <Precio>2</Precio>
+    <FechaCaduca>2025-07-29T00:59:26.8066164+02:00</FechaCaduca>
+    <Descuento>10</Descuento>
+  </Producto>
+  <Producto>
+    <Id>28</Id>
+    <Name>Carne</Name>
+    <Description>Carne de res</Description>
+    <Precio>7.5</Precio>
+    <FechaCaduca>2025-02-02T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>15</Descuento>
+  </Producto>
+  <Producto>
+    <Id>29</Id>
+    <Name>Jugo</Name>
+    <Description>Jugo de naranja</Description>
+    <Precio>1.2</Precio>
+    <FechaCaduca>2025-02-06T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>5</Descuento>
+  </Producto>
+  <Producto>
+    <Id>30</Id>
+    <Name>Champú</Name>
+    <Description>Champú anticaspa</Description>
+    <Precio>3.5</Precio>
+    <FechaCaduca>2026-01-30T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>0</Descuento>
+  </Producto>
+  <Producto>
+    <Id>31</Id>
+    <Name>Detergente</Name>
+    <Description>Detergente líquido</Description>
+    <Precio>5</Precio>
+    <FechaCaduca>2026-03-06T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>5</Descuento>
+  </Producto>
+  <Producto>
+    <Id>32</Id>
+    <Name>Esponja</Name>
+    <Description>Esponjas multiuso</Description>
+    <Precio>0.8</Precio>
+    <FechaCaduca>2026-06-14T00:59:26.8066164+02:00</FechaCaduca>
+    <Descuento>0</Descuento>
+  </Producto>
+  <Producto>
+    <Id>33</Id>
+    <Name>Cepillo</Name>
+    <Description>Cepillo dental</Description>
+    <Precio>1</Precio>
+    <FechaCaduca>2026-01-30T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>0</Descuento>
+  </Producto>
+  <Producto>
+    <Id>34</Id>
+    <Name>Jabón</Name>
+    <Description>Jabón de manos</Description>
+    <Precio>0.9</Precio>
+    <FechaCaduca>2026-12-31T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>0</Descuento>
+  </Producto>
+  <Producto>
+    <Id>35</Id>
+    <Name>Cera</Name>
+    <Description>Cera para pisos</Description>
+    <Precio>2.5</Precio>
+    <FechaCaduca>2027-04-10T00:59:26.8066164+02:00</FechaCaduca>
+    <Descuento>0</Descuento>
+  </Producto>
+  <Producto>
+    <Id>36</Id>
+    <Name>Vinagre</Name>
+    <Description>Vinagre blanco</Description>
+    <Precio>1.3</Precio>
+    <FechaCaduca>2025-07-29T00:59:26.8066164+02:00</FechaCaduca>
+    <Descuento>5</Descuento>
+  </Producto>
+  <Producto>
+    <Id>37</Id>
+    <Name>Champiñones</Name>
+    <Description>Champiñones frescos</Description>
+    <Precio>2.8</Precio>
+    <FechaCaduca>2025-02-04T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>10</Descuento>
+  </Producto>
+  <Producto>
+    <Id>38</Id>
+    <Name>Pimienta</Name>
+    <Description>Pimienta negra</Description>
+    <Precio>0.5</Precio>
+    <FechaCaduca>2026-01-30T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>0</Descuento>
+  </Producto>
+  <Producto>
+    <Id>39</Id>
+    <Name>Sal</Name>
+    <Description>Sal marina</Description>
+    <Precio>0.3</Precio>
+    <FechaCaduca>2026-01-30T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>0</Descuento>
+  </Producto>
+  <Producto>
+    <Id>40</Id>
+    <Name>Especias</Name>
+    <Description>Especias mixtas</Description>
+    <Precio>1.7</Precio>
+    <FechaCaduca>2026-01-30T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>5</Descuento>
+  </Producto>
+  <Producto>
+    <Id>41</Id>
+    <Name>Frijoles</Name>
+    <Description>Frijoles negros</Description>
+    <Precio>1.2</Precio>
+    <FechaCaduca>2025-11-26T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>0</Descuento>
+  </Producto>
+  <Producto>
+    <Id>42</Id>
+    <Name>Lentejas</Name>
+    <Description>Lentejas orgánicas</Description>
+    <Precio>1.5</Precio>
+    <FechaCaduca>2025-08-18T00:59:26.8066164+02:00</FechaCaduca>
+    <Descuento>5</Descuento>
+  </Producto>
+  <Producto>
+    <Id>43</Id>
+    <Name>Atún</Name>
+    <Description>Atún enlatado</Description>
+    <Precio>2.3</Precio>
+    <FechaCaduca>2026-01-30T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>0</Descuento>
+  </Producto>
+  <Producto>
+    <Id>44</Id>
+    <Name>Sardinas</Name>
+    <Description>Sardinas enlatadas</Description>
+    <Precio>2</Precio>
+    <FechaCaduca>2026-01-30T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>5</Descuento>
+  </Producto>
+  <Producto>
+    <Id>45</Id>
+    <Name>Helado</Name>
+    <Description>Helado de vainilla</Description>
+    <Precio>3.5</Precio>
+    <FechaCaduca>2025-03-31T00:59:26.8066164+02:00</FechaCaduca>
+    <Descuento>10</Descuento>
+  </Producto>
+  <Producto>
+    <Id>46</Id>
+    <Name>Pizza</Name>
+    <Description>Pizza congelada</Description>
+    <Precio>5</Precio>
+    <FechaCaduca>2025-03-01T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>20</Descuento>
+  </Producto>
+  <Producto>
+    <Id>47</Id>
+    <Name>Tortilla</Name>
+    <Description>Tortillas de maíz</Description>
+    <Precio>1.1</Precio>
+    <FechaCaduca>2025-02-06T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>0</Descuento>
+  </Producto>
+  <Producto>
+    <Id>48</Id>
+    <Name>Pan integral</Name>
+    <Description>Pan integral de avena</Description>
+    <Precio>1.2</Precio>
+    <FechaCaduca>2025-02-09T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>10</Descuento>
+  </Producto>
+  <Producto>
+    <Id>49</Id>
+    <Name>Salsa</Name>
+    <Description>Salsa de tomate</Description>
+    <Precio>1.5</Precio>
+    <FechaCaduca>2025-07-29T00:59:26.8066164+02:00</FechaCaduca>
+    <Descuento>5</Descuento>
+  </Producto>
+  <Producto>
+    <Id>50</Id>
+    <Name>Puré</Name>
+    <Description>Puré de papas instantáneo</Description>
+    <Precio>2.5</Precio>
+    <FechaCaduca>2026-01-30T00:59:26.8066164+01:00</FechaCaduca>
+    <Descuento>0</Descuento>
+  </Producto>
+</ArrayOfProducto>

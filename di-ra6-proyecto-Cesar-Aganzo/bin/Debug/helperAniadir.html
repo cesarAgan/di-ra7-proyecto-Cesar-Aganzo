@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda - Formulario de Añadir Objetos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1 {
+            color: #2d7f32;
+            border-bottom: 2px solid #2d7f32;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #4caf50;
+        }
+
+        p, ul {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            color: #2d7f32;
+            font-weight: bold;
+        }
+
+        .note {
+            background-color: #dff0d8;
+            padding: 10px;
+            border-left: 5px solid #2d7f32;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ayuda - Formulario de Añadir Objetos</h1>
+    <p>Este formulario te permite añadir nuevos objetos al sistema, incluyendo clientes, coches, empleados y productos. A continuación, encontrarás una descripción de las funciones de cada uno de los botones y controles disponibles.</p>
+
+    <h2>Botones Principales</h2>
+    <ul>
+        <li><span class="highlight">Refrescar Lista</span>: Actualiza la lista de objetos mostrados.</li>
+        <li><span class="highlight">Aceptar</span>: Añade un nuevo objeto (cliente, coche, empleado o producto) al sistema.</li>
+        <li><span class="highlight">Limpiar Campos</span>: Borra todos los campos para comenzar de nuevo.</li>
+        <li><span class="highlight">Cancelar</span>: Cancela la creación de un objeto nuevo y cierra el formulario.</li>
+        <li><span class="highlight">Guardar</span>: Guarda la creación del nuevo objeto, registrando toda la información en el sistema.</li>
+    </ul>
+
+    <h2>Selección de Tipo de Objeto</h2>
+    <ul>
+        <li><span class="highlight">Selector Cliente</span>: Selecciona este radio button para crear un cliente.</li>
+        <li><span class="highlight">Selector Coche</span>: Selecciona este radio button para crear un coche.</li>
+        <li><span class="highlight">Selector Empleado</span>: Selecciona este radio button para crear un empleado.</li>
+        <li><span class="highlight">Selector Producto</span>: Selecciona este radio button para crear un producto.</li>
+    </ul>
+
+    <h2>Controles Adicionales</h2>
+    <ul>
+        <li><span class="highlight">Campo Nombre o Marca</span>: Campos de texto para introducir información adicional, siempre seleccionando previamente el tipo de objeto.</li>
+        <li><span class="highlight">Campo Apellido o Correo o Modelo</span>: Campos de texto para introducir información adicional, siempre seleccionando previamente el tipo de objeto.</li>
+        <li><span class="highlight">Campo descripcion</span>: Campo para ingresar una descripción detallada del objeto (por ejemplo, producto).</li>
+        <li><span class="highlight">Selector (VIP / Descapotable / Jornada reducida)</span>: Marca esta casilla para activar características especiales, como VIP , descapotable o jornada reducida.</li>
+        <li><span class="highlight">Campo para fecha</span>: Permite seleccionar una fecha. El campo es relevante según el tipo de objeto seleccionado.</li>
+        <li><span class="highlight">Campo numéricos (Sueldo / Precio / Descuento)</span>: Permite ingresar valores numéricos para sueldo (empleado), precio (coche, producto) o descuento (producto).</li>
+        <li><span class="highlight">Selector de categoría</span>: Selecciona la categoría del empleado (por ejemplo, gerente, técnico).</li>
+        <li><span class="highlight">Tooltips</span>: Cada campo tiene una descripción emergente (tooltip) para ayudarte a completar los campos correctamente.</li>
+    </ul>
+
+    <div class="note">
+        <p>Recuerda que debes seleccionar primero un tipo de objeto (cliente, coche, empleado o producto) antes de completar la mayoría de los campos en el formulario.</p>
+    </div>
+
+</body>
+</html>
