@@ -1,0 +1,21 @@
+Este archivo contiene el proyecto completo según los requisitos establecidos en el documento de Requisitos del Proyecto.
+
+Archivos Adjuntos
+El proyecto completo ha sido adjuntado en su totalidad, incluyendo todos los archivos necesarios para su correcta ejecución y desarrollo.
+
+En la carpeta "Instaladores" se ha añadido una copia de los instaladores requeridos para la correcta implementación del proyecto. Los instaladores también están contenidos dentro del propio proyecto para facilitar su acceso.
+
+Detalles de los Instaladores
+Instalador creado con Visual Studio:
+
+El instalador creado con Visual Studio consta de dos archivos:
+Un archivo MSI.
+Un archivo EXE.
+Es importante tener en cuenta que si se separan estos archivos, el instalador no funcionará correctamente. Ambos archivos deben estar ubicados en el mismo directorio para que la instalación se ejecute sin problemas.
+Instalador con Advanced Installer:
+
+También se incluye un instalador creado con la herramienta Advanced Installer, que se encuentra en la misma carpeta de instaladores.
+Este instalador está diseñado para facilitar la instalación de las dependencias externas del proyecto. Siga las instrucciones en pantalla para completar la instalación.
+Instalación con Visual Studio
+El instalador creado con Visual Studio debe ejecutarse en su totalidad, asegurándose de que tanto el archivo MSI como el EXE estén presentes y en el mismo directorio.
+Por favor, siga estas instrucciones para asegurar una instalación y funcionamiento adecuados del proyecto.
